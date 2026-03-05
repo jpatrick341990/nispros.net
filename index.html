@@ -124,15 +124,36 @@ body {
     padding: 80px 20px;
     text-align: center;
 }
+/* SERVICES GRID */
 
-.service-box {
-    display: inline-block;
-    width: 280px;
-    background: #1e293b;
-    padding: 20px;
-    margin: 15px;
-    border-radius: 10px;
+.services-grid{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:30px;
+margin-top:40px;
 }
+
+.service-box{
+background:#1e293b;
+padding:30px;
+width:280px;
+border-radius:12px;
+transition:0.3s;
+border:1px solid #334155;
+}
+
+.service-box:hover{
+transform:translateY(-8px);
+border-color:#38bdf8;
+box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+.service-box h3{
+color:#38bdf8;
+margin-bottom:10px;
+}
+
 
 /* ================= CONTACT ================= */
 
@@ -201,7 +222,9 @@ Structured Cabling • Security Systems • Commercial WiFi • Network Infrastr
 
 <section id="services" class="services">
 <h2>Our Services</h2>
-
+    
+<div class="services-grid">
+    
 <div class="service-box">
 <h3>Structured Cabling</h3>
 <p>Cat6, Fiber, Rack Builds & Network Infrastructure.</p>
@@ -217,6 +240,7 @@ Structured Cabling • Security Systems • Commercial WiFi • Network Infrastr
 <p>Enterprise wireless setup for businesses.</p>
 </div>
 
+</div>
 </section>
 
 <!-- ================= CONTACT ================= -->
