@@ -152,7 +152,42 @@ border-color:#38bdf8;
 .service-box h3{
 color:#38bdf8;
 }
+/* IMAGE SERVICE CARD */
 
+.service-image{
+
+background:url("structured-cabling.jpg");
+background-size:cover;
+background-position:center;
+
+height:260px;
+width:280px;
+
+display:flex;
+align-items:flex-end;
+
+border-radius:12px;
+border:1px solid #334155;
+
+transition:.3s;
+}
+
+.service-image:hover{
+transform:translateY(-8px);
+border-color:#38bdf8;
+}
+
+.service-overlay{
+background:rgba(0,0,0,0.65);
+padding:15px;
+width:100%;
+border-radius:0 0 12px 12px;
+}
+
+.service-overlay h3{
+color:#38bdf8;
+margin:0;
+}
 /* ===== SERVICE AREAS (SKYLINE BACKGROUND) ===== */
 
 .service-areas{
@@ -261,9 +296,18 @@ Structured Cabling • Security Systems • Commercial WiFi • Network Infrastr
 
 <div class="services-grid">
 
-<div class="service-box">
+<div class="service-image">
+
+<div class="service-overlay">
+
 <h3>Structured Cabling</h3>
-<p>Cat6, Fiber installation, racks, patch panels and complete network infrastructure builds.</p>
+
+<p>
+Cat6, Fiber installation, racks, patch panels and network infrastructure builds.
+</p>
+
+</div>
+
 </div>
 
 <div class="service-box">
