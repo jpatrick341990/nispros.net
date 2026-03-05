@@ -4,6 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<!-- Google Search Console Verification (must be INSIDE head, OUTSIDE style) -->
+<meta name="google-site-verification" content="WvLBBOp6ryy9yWKZE03q0F-HPWVTJUgV9iRrjlAD2QA" />
+
 <title>NIS Pros | Network & Security Installation</title>
 
 <style>
@@ -45,6 +48,7 @@ gap:15px;
 
 .logo{
 height:60px;
+width:auto;
 }
 
 .brand{
@@ -81,18 +85,19 @@ url("backgroung.jpeg");
 
 background-size:cover;
 background-position:center;
+background-repeat:no-repeat;
 }
 
 .hero h1{
 font-size:48px;
 color:#38bdf8;
-margin-bottom:20px;
+margin:0 0 20px 0;
 }
 
 .hero p{
 font-size:20px;
 color:#cbd5f5;
-margin-bottom:30px;
+margin:0 0 30px 0;
 }
 
 /* ===== BUTTON ===== */
@@ -125,6 +130,7 @@ text-align:center;
 .services h2{
 color:#38bdf8;
 font-size:36px;
+margin:0;
 }
 
 .services-grid{
@@ -135,6 +141,7 @@ gap:30px;
 margin-top:40px;
 }
 
+/* Standard service box */
 .service-box{
 background:#1e293b;
 padding:30px;
@@ -152,10 +159,9 @@ border-color:#38bdf8;
 .service-box h3{
 color:#38bdf8;
 }
-/* IMAGE SERVICE CARD */
 
+/* IMAGE SERVICE CARD (Structured Cabling) */
 .service-image{
-
 background:url("structured-cabling.jpg");
 background-size:cover;
 background-position:center;
@@ -169,7 +175,6 @@ align-items:flex-end;
 
 border-radius:12px;
 border:1px solid #334155;
-
 transition:.3s;
 }
 
@@ -187,8 +192,13 @@ border-radius:0 0 12px 12px;
 
 .service-overlay h3{
 color:#38bdf8;
+margin:0 0 8px 0;
+}
+
+.service-overlay p{
 margin:0;
 }
+
 /* ===== SERVICE AREAS (SKYLINE BACKGROUND) ===== */
 
 .service-areas{
@@ -201,19 +211,25 @@ url("houston-skyline.jpg");
 
 background-size:cover;
 background-position:center;
+background-repeat:no-repeat;
 }
 
 .service-areas h2{
 font-size:36px;
 color:#38bdf8;
-margin-bottom:20px;
+margin:0 0 20px 0;
 }
 
 .service-areas p{
 max-width:700px;
-margin:auto;
+margin:0 auto;
 font-size:18px;
 color:#e2e8f0;
+}
+
+.service-areas .bold-line{
+margin-top:20px;
+font-weight:bold;
 }
 
 /* ===== CONTACT ===== */
@@ -226,6 +242,7 @@ background:#111827;
 
 .contact h2{
 color:#38bdf8;
+margin:0 0 20px 0;
 }
 
 .contact a{
@@ -242,128 +259,103 @@ background:#111827;
 font-size:14px;
 opacity:.7;
 }
-<meta name="google-site-verification" content="WvLBBOp6ryy9yWKZE03q0F-HPWVTJUgV9iRrjlAD2QA" />
+
 </style>
 </head>
 
 <body>
 
 <!-- HEADER -->
-
 <header>
+  <div class="header-container">
 
-<div class="header-container">
+    <div class="logo-area">
+      <img src="logo.png" alt="NIS Pros Logo" class="logo">
+      <div>
+        <div class="brand">NIS Pros</div>
+        <div class="tagline">Networking Infrastructure Solutions</div>
+      </div>
+    </div>
 
-<div class="logo-area">
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#areas">Service Areas</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
-<img src="logo.png" class="logo">
-
-<div>
-<div class="brand">NIS Pros</div>
-<div class="tagline">Networking Infrastructure Solutions</div>
-</div>
-
-</div>
-
-<nav>
-<a href="#services">Services</a>
-<a href="#areas">Service Areas</a>
-<a href="#contact">Contact</a>
-</nav>
-
-</div>
-
+  </div>
 </header>
 
 <!-- HERO -->
-
 <section class="hero">
+  <h1>Professional Networking Infrastructure Solutions</h1>
 
-<h1>Professional Networking Infrastructure Solutions</h1>
+  <p>
+    Structured Cabling • Security Systems • Commercial WiFi • Network Infrastructure
+  </p>
 
-<p>
-Structured Cabling • Security Systems • Commercial WiFi • Network Infrastructure
-</p>
-
-<a class="btn" href="#contact">Request a Quote</a>
-
+  <a class="btn" href="#contact">Request a Quote</a>
 </section>
 
 <!-- SERVICES -->
-
 <section id="services" class="services">
+  <h2>Our Services</h2>
 
-<h2>Our Services</h2>
+  <div class="services-grid">
 
-<div class="services-grid">
+    <!-- Structured Cabling (Image Card) -->
+    <div class="service-image">
+      <div class="service-overlay">
+        <h3>Structured Cabling</h3>
+        <p>Cat6, Fiber installation, racks, patch panels and network infrastructure builds.</p>
+      </div>
+    </div>
 
-<div class="service-image">
+    <!-- Security Systems -->
+    <div class="service-box">
+      <h3>Security Systems</h3>
+      <p>Professional camera installation, surveillance systems and access control solutions.</p>
+    </div>
 
-<div class="service-overlay">
+    <!-- Commercial WiFi -->
+    <div class="service-box">
+      <h3>Commercial WiFi</h3>
+      <p>Enterprise wireless systems designed for offices, warehouses and commercial spaces.</p>
+    </div>
 
-<h3>Structured Cabling</h3>
-
-<p>
-Cat6, Fiber installation, racks, patch panels and network infrastructure builds.
-</p>
-
-</div>
-
-</div>
-
-<div class="service-box">
-<h3>Security Systems</h3>
-<p>Professional camera installation, surveillance systems and access control solutions.</p>
-</div>
-
-<div class="service-box">
-<h3>Commercial WiFi</h3>
-<p>Enterprise wireless systems designed for offices, warehouses and commercial spaces.</p>
-</div>
-
-</div>
-
+  </div>
 </section>
 
-<!-- SERVICE AREAS (WITH SKYLINE) -->
-
+<!-- SERVICE AREAS -->
 <section id="areas" class="service-areas">
+  <h2>Service Areas</h2>
 
-<h2>Service Areas</h2>
+  <p>
+    We provide professional networking infrastructure services throughout Houston,
+    Sugar Land, Katy, The Woodlands, Pasadena, Cypress, and surrounding areas.
+  </p>
 
-<p>
-We provide professional networking infrastructure services throughout Houston,
-Sugar Land, Katy, The Woodlands, Pasadena, Cypress, and surrounding areas.
-</p>
-
-<p style="margin-top:20px;font-weight:bold;">
-Serving Commercial & Residential Clients Across Texas
-</p>
-
+  <p class="bold-line">
+    Serving Commercial & Residential Clients Across Texas
+  </p>
 </section>
 
 <!-- CONTACT -->
-
 <section id="contact" class="contact">
+  <h2>Contact Us</h2>
 
-<h2>Contact Us</h2>
+  <p>
+    📞 <a href="tel:8328448312">832-844-8312</a>
+  </p>
 
-<p>
-📞 <a href="tel:8328448312">832-844-8312</a>
-</p>
-
-<p>
-✉️ <a href="mailto:jason@nispros.net">jason@nispros.net</a>
-</p>
-
+  <p>
+    ✉️ <a href="mailto:jason@nispros.net">jason@nispros.net</a>
+  </p>
 </section>
 
 <!-- FOOTER -->
-
 <footer>
-
-© 2026 NIS Pros — Houston, TX
-
+  © 2026 NIS Pros — Houston, TX
 </footer>
 
 </body>
