@@ -3,233 +3,243 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>NIS Pros | Network & Security Installation</title>
 
 <style>
 
-/* ================= GLOBAL ================= */
+/* ===== GLOBAL ===== */
 
-html {
-    scroll-behavior: smooth;
+html{
+scroll-behavior:smooth;
 }
 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #0f172a;
-    color: white;
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:#0f172a;
+color:white;
 }
 
-/* ================= HEADER ================= */
+/* ===== HEADER ===== */
 
-.header {
-    background: #0b1120;
-    padding: 15px 30px;
-    border-bottom: 1px solid #1e293b;
+header{
+background:#0b1120;
+border-bottom:1px solid #1e293b;
+padding:15px 30px;
 }
 
-.header-container {
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.header-container{
+max-width:1200px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
 
-.logo-area {
-    display: flex;
-    align-items: center;
-    gap: 15px;
+.logo-area{
+display:flex;
+align-items:center;
+gap:15px;
 }
 
-.logo {
-    height: 60px;
-    width: auto;
+.logo{
+height:60px;
 }
 
-.brand-name {
-    font-size: 20px;
-    font-weight: bold;
-    color: #38bdf8;
+.brand{
+font-weight:bold;
+font-size:20px;
+color:#38bdf8;
 }
 
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    margin-left: 20px;
-    transition: 0.3s;
+.tagline{
+font-size:14px;
+color:#94a3b8;
 }
 
-.nav-links a:hover {
-    color: #38bdf8;
+nav a{
+color:white;
+text-decoration:none;
+margin-left:25px;
+transition:.3s;
 }
 
-/* ================= HERO (FIXED BACKGROUND) ================= */
-
-.hero {
-    text-align: center;
-    padding: 160px 20px;
-
-    background: linear-gradient(
-        rgba(2,6,23,0.75),
-        rgba(15,23,42,0.85)
-    ),
-    url("./backgroung.jpeg"); /* your uploaded file */
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+nav a:hover{
+color:#38bdf8;
 }
 
-.hero h1 {
-    font-size: 48px;
-    color: #38bdf8;
+/* ===== HERO ===== */
+
+.hero{
+text-align:center;
+padding:160px 20px;
+
+background:
+linear-gradient(rgba(2,6,23,.75), rgba(15,23,42,.85)),
+url("backgroung.jpeg");
+
+background-size:cover;
+background-position:center;
 }
 
-.hero p {
-    font-size: 20px;
-    color: #cbd5f5;
-    margin-bottom: 30px;
+.hero h1{
+font-size:48px;
+color:#38bdf8;
+margin-bottom:20px;
 }
 
-/* ================= BUTTON ================= */
-
-.btn {
-    display: inline-block;
-    padding: 14px 32px;
-    background: #38bdf8;
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 8px;
-    font-size: 18px;
-    transition: 0.3s;
-    box-shadow: 0 8px 20px rgba(56,189,248,0.3);
+.hero p{
+font-size:20px;
+color:#cbd5f5;
+margin-bottom:30px;
 }
 
-.btn:hover {
-    background: #0ea5e9;
-    transform: scale(1.05);
+/* ===== BUTTON ===== */
+
+.btn{
+display:inline-block;
+padding:14px 32px;
+background:#38bdf8;
+color:black;
+text-decoration:none;
+font-weight:bold;
+border-radius:8px;
+font-size:18px;
+transition:.3s;
+box-shadow:0 8px 20px rgba(56,189,248,.3);
 }
 
-/* ================= SERVICES ================= */
-
-.services {
-    padding: 80px 20px;
-    text-align: center;
+.btn:hover{
+background:#0ea5e9;
+transform:scale(1.05);
 }
 
-.services-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 40px;
+/* ===== SERVICES ===== */
+
+.services{
+padding:90px 20px;
+text-align:center;
 }
 
-.service-box {
-    background: #1e293b;
-    padding: 30px;
-    width: 280px;
-    border-radius: 12px;
-    border: 1px solid #334155;
-    transition: 0.3s;
+.services h2{
+color:#38bdf8;
+font-size:36px;
 }
 
-.service-box:hover {
-    transform: translateY(-8px);
-    border-color: #38bdf8;
+.services-grid{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:30px;
+margin-top:40px;
 }
 
-.service-box h3 {
-    color: #38bdf8;
+.service-box{
+background:#1e293b;
+padding:30px;
+width:280px;
+border-radius:12px;
+border:1px solid #334155;
+transition:.3s;
 }
 
-/* ================= SERVICE AREAS ================= */
-.service-area{
-    background-image: url("images/houston-skyline.jpg");
-    background-size: cover;
-    background-position: center;
-    padding: 120px 20px;
+.service-box:hover{
+transform:translateY(-8px);
+border-color:#38bdf8;
 }
 
-.service-text{
-    background: rgba(0,0,0,0.65);
-    max-width: 800px;
-    margin: auto;
-    padding: 40px;
-    border-radius: 8px;
-}
-.service-areas {
-    padding: 100px 20px;
-    text-align: center;
-    background: #0b1120;
+.service-box h3{
+color:#38bdf8;
 }
 
-.service-areas h2 {
-    color: #38bdf8;
-    font-size: 36px;
+/* ===== SERVICE AREAS (SKYLINE BACKGROUND) ===== */
+
+.service-areas{
+padding:120px 20px;
+text-align:center;
+
+background:
+linear-gradient(rgba(2,6,23,.75), rgba(15,23,42,.85)),
+url("houston-skyline.jpg");
+
+background-size:cover;
+background-position:center;
 }
 
-.service-areas p {
-    max-width: 700px;
-    margin: auto;
-    font-size: 18px;
-    color: #cbd5f5;
+.service-areas h2{
+font-size:36px;
+color:#38bdf8;
+margin-bottom:20px;
 }
 
-/* ================= CONTACT ================= */
-
-#contact {
-    padding: 80px 20px;
-    text-align: center;
-    background: #111827;
+.service-areas p{
+max-width:700px;
+margin:auto;
+font-size:18px;
+color:#e2e8f0;
 }
 
-#contact a {
-    color: #38bdf8;
-    text-decoration: none;
+/* ===== CONTACT ===== */
+
+.contact{
+padding:90px 20px;
+text-align:center;
+background:#111827;
 }
 
-/* ================= FOOTER ================= */
+.contact h2{
+color:#38bdf8;
+}
 
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #111827;
-    font-size: 14px;
-    opacity: 0.7;
+.contact a{
+color:#38bdf8;
+text-decoration:none;
+}
+
+/* ===== FOOTER ===== */
+
+footer{
+text-align:center;
+padding:20px;
+background:#111827;
+font-size:14px;
+opacity:.7;
 }
 
 </style>
 </head>
+
 <body>
 
-<!-- ================= HEADER ================= -->
+<!-- HEADER -->
 
-<header class="header">
+<header>
+
 <div class="header-container">
 
 <div class="logo-area">
-<img src="logo.png" alt="Logo" class="logo">
+
+<img src="logo.png" class="logo">
+
 <div>
-<div class="brand-name">NIS Pros</div>
-<div style="font-size:14px; color:#94a3b8;">
-Networking Infrastructure Solutions
-</div>
-</div>
+<div class="brand">NIS Pros</div>
+<div class="tagline">Networking Infrastructure Solutions</div>
 </div>
 
-<nav class="nav-links">
+</div>
+
+<nav>
 <a href="#services">Services</a>
 <a href="#areas">Service Areas</a>
 <a href="#contact">Contact</a>
 </nav>
 
 </div>
+
 </header>
 
-<!-- ================= HERO ================= -->
+<!-- HERO -->
 
 <section class="hero">
 
@@ -243,7 +253,7 @@ Structured Cabling • Security Systems • Commercial WiFi • Network Infrastr
 
 </section>
 
-<!-- ================= SERVICES ================= -->
+<!-- SERVICES -->
 
 <section id="services" class="services">
 
@@ -253,23 +263,24 @@ Structured Cabling • Security Systems • Commercial WiFi • Network Infrastr
 
 <div class="service-box">
 <h3>Structured Cabling</h3>
-<p>Cat6, Fiber, Rack Builds & Network Infrastructure.</p>
+<p>Cat6, Fiber installation, racks, patch panels and complete network infrastructure builds.</p>
 </div>
 
 <div class="service-box">
 <h3>Security Systems</h3>
-<p>Camera installation & access control solutions.</p>
+<p>Professional camera installation, surveillance systems and access control solutions.</p>
 </div>
 
 <div class="service-box">
 <h3>Commercial WiFi</h3>
-<p>Enterprise wireless setup for businesses.</p>
+<p>Enterprise wireless systems designed for offices, warehouses and commercial spaces.</p>
 </div>
 
 </div>
+
 </section>
 
-<!-- ================= SERVICE AREAS ================= -->
+<!-- SERVICE AREAS (WITH SKYLINE) -->
 
 <section id="areas" class="service-areas">
 
@@ -280,15 +291,15 @@ We provide professional networking infrastructure services throughout Houston,
 Sugar Land, Katy, The Woodlands, Pasadena, Cypress, and surrounding areas.
 </p>
 
-<p style="margin-top:20px; font-weight:bold;">
+<p style="margin-top:20px;font-weight:bold;">
 Serving Commercial & Residential Clients Across Texas
 </p>
 
 </section>
 
-<!-- ================= CONTACT ================= -->
+<!-- CONTACT -->
 
-<section id="contact">
+<section id="contact" class="contact">
 
 <h2>Contact Us</h2>
 
@@ -302,10 +313,12 @@ Serving Commercial & Residential Clients Across Texas
 
 </section>
 
-<!-- ================= FOOTER ================= -->
+<!-- FOOTER -->
 
 <footer>
+
 © 2026 NIS Pros — Houston, TX
+
 </footer>
 
 </body>
