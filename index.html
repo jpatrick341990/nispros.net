@@ -64,18 +64,21 @@ body {
     color: #38bdf8;
 }
 
-/* ================= HERO ================= */
+/* ================= HERO (FIXED BACKGROUND) ================= */
 
 .hero {
     text-align: center;
     padding: 160px 20px;
 
-    background:
-        linear-gradient(rgba(2,6,23,0.85), rgba(15,23,42,0.9)),
-        url("./backgroung.jpeg"); /* <-- YOUR MISSPELLED FILE */
+    background: linear-gradient(
+        rgba(2,6,23,0.85),
+        rgba(15,23,42,0.9)
+    ),
+    url("backgroung.jpeg"); /* your uploaded file */
 
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
 }
 
 .hero h1 {
