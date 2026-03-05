@@ -9,6 +9,10 @@
 
 /* ================= GLOBAL ================= */
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -75,13 +79,30 @@ body {
 .hero h1 {
     font-size: 48px;
     color: #38bdf8;
+    animation: fadeIn 1.2s ease-in-out;
 }
 
 .hero p {
     font-size: 20px;
     color: #cbd5f5;
     margin-bottom: 30px;
+    animation: fadeIn 1.8s ease-in-out;
 }
+
+/* Animation */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Button */
 
 .btn {
     display: inline-block;
@@ -93,10 +114,12 @@ body {
     border-radius: 8px;
     font-size: 18px;
     transition: 0.3s;
+    box-shadow: 0 8px 20px rgba(56,189,248,0.3);
 }
 
 .btn:hover {
     background: #0ea5e9;
+    transform: scale(1.05);
 }
 
 /* ================= SERVICES ================= */
@@ -182,25 +205,25 @@ footer {
 <!-- ================= HEADER ================= -->
 
 <header class="header">
-  <div class="header-container">
+<div class="header-container">
 
-    <div class="logo-area">
-      <img src="logo.png" alt="Logo" class="logo">
-      <div>
-        <div class="brand-name">NIS Pros</div>
-        <div style="font-size:14px; color:#94a3b8;">
-          Networking Infrastructure Solutions
-        </div>
-      </div>
-    </div>
+<div class="logo-area">
+<img src="logo.png" alt="Logo" class="logo">
+<div>
+<div class="brand-name">NIS Pros</div>
+<div style="font-size:14px; color:#94a3b8;">
+Networking Infrastructure Solutions
+</div>
+</div>
+</div>
 
-    <nav class="nav-links">
-      <a href="#services">Services</a>
-      <a href="#areas">Service Areas</a>
-      <a href="#contact">Contact</a>
-    </nav>
+<nav class="nav-links">
+<a href="#services">Services</a>
+<a href="#areas">Service Areas</a>
+<a href="#contact">Contact</a>
+</nav>
 
-  </div>
+</div>
 </header>
 
 <!-- ================= HERO ================= -->
