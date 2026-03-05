@@ -6,6 +6,9 @@
 <title>NIS Pros | Network & Security Installation</title>
 
 <style>
+
+/* ================= GLOBAL ================= */
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -13,20 +16,52 @@ body {
     color: white;
 }
 
-/* Header */
-header {
-    background: #111827;
-    padding: 20px;
-    text-align: center;
+/* ================= HEADER ================= */
+
+.header {
+    background: #0b1120;
+    padding: 15px 30px;
+    border-bottom: 1px solid #1e293b;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 28px;
+.header-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    height: 60px;
+    width: auto;
+}
+
+.brand-name {
+    font-size: 20px;
+    font-weight: bold;
     color: #38bdf8;
 }
 
-/* Hero Section */
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #38bdf8;
+}
+
+/* ================= HERO ================= */
+
 .hero {
     text-align: center;
     padding: 120px 20px;
@@ -34,7 +69,7 @@ header h1 {
 }
 
 .hero h2 {
-    font-size: 40px;
+    font-size: 36px;
 }
 
 .hero p {
@@ -53,7 +88,8 @@ header h1 {
     border-radius: 6px;
 }
 
-/* Services */
+/* ================= SERVICES ================= */
+
 .services {
     padding: 80px 20px;
     text-align: center;
@@ -68,7 +104,21 @@ header h1 {
     border-radius: 10px;
 }
 
-/* Footer */
+/* ================= CONTACT ================= */
+
+#contact {
+    padding: 80px 20px;
+    text-align: center;
+    background: #111827;
+}
+
+#contact a {
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+/* ================= FOOTER ================= */
+
 footer {
     text-align: center;
     padding: 20px;
@@ -76,20 +126,31 @@ footer {
     font-size: 14px;
     opacity: 0.7;
 }
+
 </style>
 </head>
+
 <body>
 
-<header>
+<!-- ================= HEADER ================= -->
 
+<header class="header">
+  <div class="header-container">
 
-    
-<img src="logo.png" alt="NIS Pros Logo"
-style="height:120px; width:auto;">
+    <div class="logo-area">
+      <img src="logo.png" alt="NIS Pros Logo" class="logo">
+      <span class="brand-name">NIS Pros</span>
+    </div>
 
+    <nav class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
-    
+  </div>
 </header>
+
+<!-- ================= HERO ================= -->
 
 <section class="hero">
 <h2>Professional Network & Security Installations</h2>
@@ -97,7 +158,9 @@ style="height:120px; width:auto;">
 <a class="btn" href="#contact">Request a Quote</a>
 </section>
 
-<section class="services">
+<!-- ================= SERVICES ================= -->
+
+<section id="services" class="services">
 <h2>Our Services</h2>
 
 <div class="service-box">
@@ -116,21 +179,19 @@ style="height:120px; width:auto;">
 </div>
 
 </section>
-<!-- CONTACT SECTION -->
-<section id="contact" style="padding:80px 20px; text-align:center; background:#111827;">
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact">
 
 <h2>Contact Us</h2>
 
 <p>
-📞 <a href="tel:8328448312" style="color:#38bdf8; text-decoration:none;">
-832-844-8312
-</a>
+📞 <a href="tel:8328448312">832-844-8312</a>
 </p>
 
 <p>
-✉️ <a href="mailto:jason@nispros.net" style="color:#38bdf8; text-decoration:none;">
-jason@nispros.net
-</a>
+✉️ <a href="mailto:jason@nispros.net">jason@nispros.net</a>
 </p>
 
 <form action="https://formspree.io/f/YOUR-FORM-ID" method="POST"
@@ -153,6 +214,9 @@ Send Message
 </form>
 
 </section>
+
+<!-- ================= FOOTER ================= -->
+
 <footer>
 © 2026 NIS Pros — Houston, TX
 </footer>
