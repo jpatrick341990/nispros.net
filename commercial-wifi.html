@@ -7,7 +7,9 @@
   <meta name="description" content="NIS Pros provides commercial WiFi installation in Houston for offices, warehouses, retail spaces, and business environments that need reliable wireless coverage.">
 
   <style>
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
@@ -17,7 +19,11 @@
       line-height: 1.6;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
+
+    /* HEADER */
 
     header {
       background: #0b1120;
@@ -31,15 +37,40 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 20px;
       flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .logo-link {
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .logo {
+      height: 60px;
+      width: auto;
+      display: block;
+    }
+
+    .brand-wrap {
+      text-decoration: none;
     }
 
     .brand {
       font-weight: bold;
-      font-size: 22px;
+      font-size: 20px;
       color: #38bdf8;
-      text-decoration: none;
+    }
+
+    .tagline {
+      font-size: 14px;
+      color: #94a3b8;
     }
 
     nav {
@@ -51,12 +82,15 @@
     nav a {
       color: white;
       text-decoration: none;
+      transition: .3s;
     }
 
     nav a:hover,
-    .brand:hover {
+    .brand-wrap:hover .brand {
       color: #38bdf8;
     }
+
+    /* HERO */
 
     .hero {
       padding: 110px 20px;
@@ -81,6 +115,8 @@
       color: #e2e8f0;
       font-size: 19px;
     }
+
+    /* CONTENT */
 
     .content {
       max-width: 1100px;
@@ -107,12 +143,15 @@
 
     ul {
       padding-left: 20px;
+      margin: 0;
     }
 
     li {
       margin-bottom: 10px;
       color: #e5e7eb;
     }
+
+    /* BUTTON */
 
     .btn {
       display: inline-block;
@@ -123,11 +162,14 @@
       text-decoration: none;
       font-weight: bold;
       border-radius: 8px;
+      transition: .3s;
     }
 
     .btn:hover {
       background: #0ea5e9;
     }
+
+    /* FOOTER */
 
     footer {
       text-align: center;
@@ -137,9 +179,33 @@
       opacity: .8;
     }
 
+    /* MOBILE */
+
     @media (max-width: 768px) {
-      .hero h1 { font-size: 34px; }
-      .section h2 { font-size: 28px; }
+      header {
+        padding: 15px 20px;
+      }
+
+      .header-container {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .logo-area {
+        justify-content: center;
+      }
+
+      nav {
+        justify-content: center;
+      }
+
+      .hero h1 {
+        font-size: 34px;
+      }
+
+      .section h2 {
+        font-size: 28px;
+      }
     }
   </style>
 </head>
@@ -147,13 +213,26 @@
 
   <header>
     <div class="header-container">
-      <a href="index.html" class="brand">NIS Pros</a>
+
+      <div class="logo-area">
+        <a href="index.html" class="logo-link">
+          <img src="logo.png" alt="NIS Pros Logo" class="logo">
+        </a>
+
+        <a href="index.html" class="brand-wrap">
+          <div class="brand">NIS Pros</div>
+          <div class="tagline">Networking Infrastructure Solutions</div>
+        </a>
+      </div>
+
       <nav>
         <a href="index.html">Home</a>
         <a href="index.html#services">Services</a>
+        <a href="index.html#areas">Service Areas</a>
         <a href="index.html#contact">Contact</a>
         <a href="index.html#quote">Request Quote</a>
       </nav>
+
     </div>
   </header>
 
