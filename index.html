@@ -134,23 +134,6 @@ nav a:hover{ color:#38bdf8; }
   margin-top:40px;
 }
 
-/* Standard service box (Commercial WiFi stays as text for now) */
-.service-box{
-  background:#1e293b;
-  padding:30px;
-  width:280px;
-  border-radius:12px;
-  border:1px solid #334155;
-  transition:.3s;
-}
-
-.service-box:hover{
-  transform:translateY(-8px);
-  border-color:#38bdf8;
-}
-
-.service-box h3{ color:#38bdf8; }
-
 /* Shared overlay for image cards */
 .service-overlay{
   background:linear-gradient(transparent, rgba(0,0,0,0.85));
@@ -212,6 +195,29 @@ nav a:hover{ color:#38bdf8; }
 }
 
 .security-image:hover{
+  transform:translateY(-8px);
+  border-color:#38bdf8;
+}
+
+/* Commercial WiFi (image card) */
+.wifi-image{
+  background:url("commercial-wifi.jpg");
+  background-size:cover;
+  background-position:center;
+
+  height:260px;
+  width:100%;
+  max-width:340px;
+
+  display:flex;
+  align-items:flex-end;
+
+  border-radius:12px;
+  border:1px solid #334155;
+  transition:.3s;
+}
+
+.wifi-image:hover{
   transform:translateY(-8px);
   border-color:#38bdf8;
 }
@@ -316,7 +322,7 @@ footer{
 
   <div class="services-grid">
 
-    <!-- Structured Cabling (Image Card) -->
+    <!-- Structured Cabling -->
     <div class="service-image">
       <div class="service-overlay">
         <h3>Structured Cabling</h3>
@@ -324,7 +330,7 @@ footer{
       </div>
     </div>
 
-    <!-- Security Systems (Image Card) -->
+    <!-- Security Systems -->
     <div class="security-image">
       <div class="service-overlay">
         <h3>Security Systems</h3>
@@ -332,10 +338,12 @@ footer{
       </div>
     </div>
 
-    <!-- Commercial WiFi (Text Card for now) -->
-    <div class="service-box">
-      <h3>Commercial WiFi</h3>
-      <p>Enterprise wireless systems designed for offices, warehouses and commercial spaces.</p>
+    <!-- Commercial WiFi -->
+    <div class="wifi-image">
+      <div class="service-overlay">
+        <h3>Commercial WiFi</h3>
+        <p>Enterprise wireless systems designed for offices, warehouses and commercial spaces.</p>
+      </div>
     </div>
 
   </div>
