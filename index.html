@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Google Search Console Verification (must be INSIDE head, OUTSIDE style) -->
+<!-- Google Search Console Verification -->
 <meta name="google-site-verification" content="WvLBBOp6ryy9yWKZE03q0F-HPWVTJUgV9iRrjlAD2QA" />
 
 <title>NIS Pros | Network & Security Installation</title>
@@ -13,256 +13,268 @@
 
 /* ===== GLOBAL ===== */
 
-html{
-scroll-behavior:smooth;
-}
+html{ scroll-behavior:smooth; }
 
 body{
-margin:0;
-font-family:Arial, sans-serif;
-background:#0f172a;
-color:white;
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#0f172a;
+  color:white;
 }
 
 /* ===== HEADER ===== */
 
 header{
-background:#0b1120;
-border-bottom:1px solid #1e293b;
-padding:15px 30px;
+  background:#0b1120;
+  border-bottom:1px solid #1e293b;
+  padding:15px 30px;
 }
 
 .header-container{
-max-width:1200px;
-margin:auto;
-display:flex;
-justify-content:space-between;
-align-items:center;
+  max-width:1200px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 }
 
 .logo-area{
-display:flex;
-align-items:center;
-gap:15px;
+  display:flex;
+  align-items:center;
+  gap:15px;
 }
 
-.logo{
-height:60px;
-width:auto;
-}
+.logo{ height:60px; width:auto; }
 
 .brand{
-font-weight:bold;
-font-size:20px;
-color:#38bdf8;
+  font-weight:bold;
+  font-size:20px;
+  color:#38bdf8;
 }
 
 .tagline{
-font-size:14px;
-color:#94a3b8;
+  font-size:14px;
+  color:#94a3b8;
 }
 
 nav a{
-color:white;
-text-decoration:none;
-margin-left:25px;
-transition:.3s;
+  color:white;
+  text-decoration:none;
+  margin-left:25px;
+  transition:.3s;
 }
 
-nav a:hover{
-color:#38bdf8;
-}
+nav a:hover{ color:#38bdf8; }
 
 /* ===== HERO ===== */
 
 .hero{
-text-align:center;
-padding:160px 20px;
+  text-align:center;
+  padding:160px 20px;
 
-background:
-linear-gradient(rgba(2,6,23,.75), rgba(15,23,42,.85)),
-url("backgroung.jpeg");
+  background:
+    linear-gradient(rgba(2,6,23,.75), rgba(15,23,42,.85)),
+    url("backgroung.jpeg");
 
-background-size:cover;
-background-position:center;
-background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
 }
 
 .hero h1{
-font-size:48px;
-color:#38bdf8;
-margin:0 0 20px 0;
+  font-size:48px;
+  color:#38bdf8;
+  margin:0 0 20px 0;
 }
 
 .hero p{
-font-size:20px;
-color:#cbd5f5;
-margin:0 0 30px 0;
+  font-size:20px;
+  color:#cbd5f5;
+  margin:0 0 30px 0;
 }
 
 /* ===== BUTTON ===== */
 
 .btn{
-display:inline-block;
-padding:14px 32px;
-background:#38bdf8;
-color:black;
-text-decoration:none;
-font-weight:bold;
-border-radius:8px;
-font-size:18px;
-transition:.3s;
-box-shadow:0 8px 20px rgba(56,189,248,.3);
+  display:inline-block;
+  padding:14px 32px;
+  background:#38bdf8;
+  color:black;
+  text-decoration:none;
+  font-weight:bold;
+  border-radius:8px;
+  font-size:18px;
+  transition:.3s;
+  box-shadow:0 8px 20px rgba(56,189,248,.3);
 }
 
 .btn:hover{
-background:#0ea5e9;
-transform:scale(1.05);
+  background:#0ea5e9;
+  transform:scale(1.05);
 }
 
 /* ===== SERVICES ===== */
 
 .services{
-padding:90px 20px;
-text-align:center;
+  padding:90px 20px;
+  text-align:center;
 }
 
 .services h2{
-color:#38bdf8;
-font-size:36px;
-margin:0;
+  color:#38bdf8;
+  font-size:36px;
+  margin:0;
 }
 
 .services-grid{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:30px;
-margin-top:40px;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:30px;
+  margin-top:40px;
 }
 
-/* Standard service box */
+/* Standard service box (Commercial WiFi stays as text for now) */
 .service-box{
-background:#1e293b;
-padding:30px;
-width:280px;
-border-radius:12px;
-border:1px solid #334155;
-transition:.3s;
+  background:#1e293b;
+  padding:30px;
+  width:280px;
+  border-radius:12px;
+  border:1px solid #334155;
+  transition:.3s;
 }
 
 .service-box:hover{
-transform:translateY(-8px);
-border-color:#38bdf8;
+  transform:translateY(-8px);
+  border-color:#38bdf8;
 }
 
-.service-box h3{
-color:#38bdf8;
-}
+.service-box h3{ color:#38bdf8; }
 
-/* IMAGE SERVICE CARD (Structured Cabling) */
-.service-image{
-background:url("structured-cabling.jpg");
-background-size:cover;
-background-position:center;
-
-height:260px;
-width:100%;
-max-width:340px;
-
-display:flex;
-align-items:flex-end;
-
-border-radius:12px;
-border:1px solid #334155;
-transition:.3s;
-}
-
-.service-image:hover{
-transform:translateY(-8px);
-border-color:#38bdf8;
-}
-
+/* Shared overlay for image cards */
 .service-overlay{
-background:linear-gradient(transparent, rgba(0,0,0,0.85));
-padding:20px;
-width:100%;
-border-radius:0 0 12px 12px;
+  background:linear-gradient(transparent, rgba(0,0,0,0.85));
+  padding:20px;
+  width:100%;
+  border-radius:0 0 12px 12px;
 }
 
 .service-overlay h3{
-color:white;
-margin:0 0 8px 0;
+  color:white;
+  margin:0 0 8px 0;
 }
 
 .service-overlay p{
-color:#e5e7eb;
-font-size:14px;
+  color:#e5e7eb;
+  font-size:14px;
+  margin:0;
 }
 
-.service-overlay p{
-margin:0;
+/* Structured Cabling (image card) */
+.service-image{
+  background:url("structured-cabling.jpg");
+  background-size:cover;
+  background-position:center;
+
+  height:260px;
+  width:100%;
+  max-width:340px;
+
+  display:flex;
+  align-items:flex-end;
+
+  border-radius:12px;
+  border:1px solid #334155;
+  transition:.3s;
+}
+
+.service-image:hover{
+  transform:translateY(-8px);
+  border-color:#38bdf8;
+}
+
+/* Security Systems (image card) */
+.security-image{
+  background:url("security-systems.jpg");
+  background-size:cover;
+  background-position:center;
+
+  height:260px;
+  width:100%;
+  max-width:340px;
+
+  display:flex;
+  align-items:flex-end;
+
+  border-radius:12px;
+  border:1px solid #334155;
+  transition:.3s;
+}
+
+.security-image:hover{
+  transform:translateY(-8px);
+  border-color:#38bdf8;
 }
 
 /* ===== SERVICE AREAS (SKYLINE BACKGROUND) ===== */
 
 .service-areas{
-padding:120px 20px;
-text-align:center;
+  padding:120px 20px;
+  text-align:center;
 
-background:
-linear-gradient(rgba(2,6,23,.75), rgba(15,23,42,.85)),
-url("houston-skyline.jpg");
+  background:
+    linear-gradient(rgba(2,6,23,.75), rgba(15,23,42,.85)),
+    url("houston-skyline.jpg");
 
-background-size:cover;
-background-position:center;
-background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
 }
 
 .service-areas h2{
-font-size:36px;
-color:#38bdf8;
-margin:0 0 20px 0;
+  font-size:36px;
+  color:#38bdf8;
+  margin:0 0 20px 0;
 }
 
 .service-areas p{
-max-width:700px;
-margin:0 auto;
-font-size:18px;
-color:#e2e8f0;
+  max-width:700px;
+  margin:0 auto;
+  font-size:18px;
+  color:#e2e8f0;
 }
 
 .service-areas .bold-line{
-margin-top:20px;
-font-weight:bold;
+  margin-top:20px;
+  font-weight:bold;
 }
 
 /* ===== CONTACT ===== */
 
 .contact{
-padding:90px 20px;
-text-align:center;
-background:#111827;
+  padding:90px 20px;
+  text-align:center;
+  background:#111827;
 }
 
 .contact h2{
-color:#38bdf8;
-margin:0 0 20px 0;
+  color:#38bdf8;
+  margin:0 0 20px 0;
 }
 
 .contact a{
-color:#38bdf8;
-text-decoration:none;
+  color:#38bdf8;
+  text-decoration:none;
 }
 
 /* ===== FOOTER ===== */
 
 footer{
-text-align:center;
-padding:20px;
-background:#111827;
-font-size:14px;
-opacity:.7;
+  text-align:center;
+  padding:20px;
+  background:#111827;
+  font-size:14px;
+  opacity:.7;
 }
 
 </style>
@@ -294,11 +306,7 @@ opacity:.7;
 <!-- HERO -->
 <section class="hero">
   <h1>Professional Networking Infrastructure Solutions</h1>
-
-  <p>
-    Structured Cabling • Security Systems • Commercial WiFi • Network Infrastructure
-  </p>
-
+  <p>Structured Cabling • Security Systems • Commercial WiFi • Network Infrastructure</p>
   <a class="btn" href="#contact">Request a Quote</a>
 </section>
 
@@ -316,13 +324,15 @@ opacity:.7;
       </div>
     </div>
 
-    <!-- Security Systems -->
-    <div class="service-box">
-      <h3>Security Systems</h3>
-      <p>Professional camera installation, surveillance systems and access control solutions.</p>
+    <!-- Security Systems (Image Card) -->
+    <div class="security-image">
+      <div class="service-overlay">
+        <h3>Security Systems</h3>
+        <p>Professional camera installation, surveillance systems and access control solutions.</p>
+      </div>
     </div>
 
-    <!-- Commercial WiFi -->
+    <!-- Commercial WiFi (Text Card for now) -->
     <div class="service-box">
       <h3>Commercial WiFi</h3>
       <p>Enterprise wireless systems designed for offices, warehouses and commercial spaces.</p>
@@ -349,13 +359,8 @@ opacity:.7;
 <section id="contact" class="contact">
   <h2>Contact Us</h2>
 
-  <p>
-    📞 <a href="tel:8328448312">832-844-8312</a>
-  </p>
-
-  <p>
-    ✉️ <a href="mailto:jason@nispros.net">jason@nispros.net</a>
-  </p>
+  <p>📞 <a href="tel:8328448312">832-844-8312</a></p>
+  <p>✉️ <a href="mailto:jason@nispros.net">jason@nispros.net</a></p>
 </section>
 
 <!-- FOOTER -->
