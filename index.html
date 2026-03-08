@@ -32,10 +32,14 @@
     }
 
     header {
-      background: #0b1120;
-      border-bottom: 1px solid #1e293b;
-      padding: 15px 30px;
-    }
+  background: #0b1120;
+  border-bottom: 1px solid #1e293b;
+  padding: 15px 30px;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 
     .header-container {
       max-width: 1200px;
@@ -56,6 +60,7 @@
     .logo {
       height: 60px;
       width: auto;
+      display: block;
     }
 
     .brand {
@@ -91,7 +96,7 @@
       padding: 160px 20px;
       background:
         linear-gradient(rgba(2, 6, 23, 0.35), rgba(15, 23, 42, 0.50)),
-        url("images/background.jpeg");
+        url("/images/background.jpeg");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -236,15 +241,15 @@
     }
 
     .service-image {
-      background-image: url("images/structured-cabling.jpg");
+      background-image: url("/images/structured-cabling.jpg");
     }
 
     .security-image {
-      background-image: url("images/security-systems.jpg");
+      background-image: url("/images/security-systems.jpg");
     }
 
     .wifi-image {
-      background-image: url("images/commercial-wifi.jpg");
+      background-image: url("/images/commercial-wifi.jpg");
     }
 
     .service-areas {
@@ -252,7 +257,7 @@
       text-align: center;
       background:
         linear-gradient(rgba(2, 6, 23, 0.35), rgba(15, 23, 42, 0.50)),
-        url("images/houston-skyline.jpg");
+        url("/images/houston-skyline.jpg");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -436,7 +441,7 @@
   <header>
     <div class="header-container">
       <div class="logo-area">
-        <img src="images/logo.png" alt="NIS Pros Logo" class="logo">
+        <img src="/images/logo.png" alt="NIS Pros Logo" class="logo">
         <div>
           <div class="brand">NIS Pros</div>
           <div class="tagline">Networking Infrastructure Solutions</div>
@@ -468,7 +473,7 @@
     </p>
 
     <div class="services-grid">
-      <a href="pages/structured-cabling.html" class="service-image">
+      <a href="/pages/structured-cabling.html" class="service-image">
         <div class="service-overlay">
           <h3><i class="fa-solid fa-network-wired"></i> Structured Cabling</h3>
           <ul class="service-list">
@@ -481,7 +486,7 @@
         </div>
       </a>
 
-      <a href="pages/security-systems.html" class="security-image">
+      <a href="/pages/security-systems.html" class="security-image">
         <div class="service-overlay">
           <h3><i class="fa-solid fa-video"></i> Security Systems</h3>
           <ul class="service-list">
@@ -494,7 +499,7 @@
         </div>
       </a>
 
-      <a href="pages/commercial-wifi.html" class="wifi-image">
+      <a href="/pages/commercial-wifi.html" class="wifi-image">
         <div class="service-overlay">
           <h3><i class="fa-solid fa-wifi"></i> Commercial WiFi</h3>
           <ul class="service-list">
