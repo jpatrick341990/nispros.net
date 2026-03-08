@@ -13,10 +13,12 @@
   <meta name="author" content="NIS Pros">
 
   <style>
-    /* ===== GLOBAL ===== */
-
     html {
       scroll-behavior: smooth;
+    }
+
+    * {
+      box-sizing: border-box;
     }
 
     body {
@@ -26,12 +28,6 @@
       color: white;
       line-height: 1.6;
     }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    /* ===== HEADER ===== */
 
     header {
       background: #0b1120;
@@ -80,7 +76,7 @@
     nav a {
       color: white;
       text-decoration: none;
-      transition: .3s;
+      transition: 0.3s;
       font-size: 15px;
     }
 
@@ -88,14 +84,12 @@
       color: #38bdf8;
     }
 
-    /* ===== HERO ===== */
-
     .hero {
       text-align: center;
       padding: 160px 20px;
       background:
-        linear-gradient(rgba(2,6,23,.35), rgba(15,23,42,.50)),
-        url("backgroung.jpeg");
+        linear-gradient(rgba(2, 6, 23, 0.35), rgba(15, 23, 42, 0.50)),
+        url("images/background.jpeg");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -119,8 +113,6 @@
       margin: 0 0 30px 0;
     }
 
-    /* ===== BUTTON ===== */
-
     .btn {
       display: inline-block;
       padding: 14px 32px;
@@ -130,16 +122,14 @@
       font-weight: bold;
       border-radius: 8px;
       font-size: 18px;
-      transition: .3s;
-      box-shadow: 0 8px 20px rgba(56,189,248,.3);
+      transition: 0.3s;
+      box-shadow: 0 8px 20px rgba(56, 189, 248, 0.3);
     }
 
     .btn:hover {
       background: #0ea5e9;
       transform: scale(1.05);
     }
-
-    /* ===== SERVICES ===== */
 
     .services {
       padding: 90px 20px;
@@ -169,21 +159,21 @@
     }
 
     .service-overlay {
-      background: linear-gradient(transparent, rgba(0,0,0,0.78));
-      padding: 20px;
-      width: 100%;
-      border-radius: 0 0 12px 12px;
-      text-align: left;
-    }
+  background: linear-gradient(transparent, rgba(0,0,0,0.78));
+  padding: 35px 20px 25px 20px;
+  width: 100%;
+  border-radius: 0 0 12px 12px;
+  text-align: left;
+}
 
     .service-overlay h3 {
-  color: white;
-  margin: 0 0 8px 0;
-  font-size: 30px;
-  border-bottom: 2px solid white;
-  padding-bottom: 6px;
-  display: inline-block;
-}
+      color: white;
+      margin: 0 0 8px 0;
+      font-size: 30px;
+      border-bottom: 2px solid white;
+      padding-bottom: 6px;
+      display: inline-block;
+    }
 
     .service-list {
       margin: 6px 0 0 0;
@@ -206,12 +196,12 @@
       align-items: flex-end;
       border-radius: 12px;
       border: 1px solid #334155;
-      transition: .3s;
+      transition: 0.3s;
       overflow: hidden;
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      box-shadow: 0 10px 24px rgba(0,0,0,.18);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
       text-decoration: none;
       color: inherit;
     }
@@ -221,30 +211,28 @@
     .wifi-image:hover {
       transform: translateY(-8px);
       border-color: #38bdf8;
-      box-shadow: 0 14px 28px rgba(0,0,0,.28);
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.28);
       cursor: pointer;
     }
 
     .service-image {
-      background-image: url("structured-cabling.jpg");
+      background-image: url("images/structured-cabling.jpg");
     }
 
     .security-image {
-      background-image: url("security-systems.jpg");
+      background-image: url("images/security-systems.jpg");
     }
 
     .wifi-image {
-      background-image: url("commercial-wifi.jpg");
+      background-image: url("images/commercial-wifi.jpg");
     }
-
-    /* ===== SERVICE AREAS ===== */
 
     .service-areas {
       padding: 120px 20px;
       text-align: center;
       background:
-        linear-gradient(rgba(2,6,23,.35), rgba(15,23,42,.50)),
-        url("houston-skyline.jpg");
+        linear-gradient(rgba(2, 6, 23, 0.35), rgba(15, 23, 42, 0.50)),
+        url("images/houston-skyline.jpg");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -268,8 +256,6 @@
       font-weight: bold;
     }
 
-    /* ===== CONTACT ===== */
-
     .contact {
       padding: 90px 20px;
       text-align: center;
@@ -292,8 +278,6 @@
       text-decoration: none;
     }
 
-    /* ===== SEO CONTENT ===== */
-
     .seo-section {
       padding: 70px 20px;
       background: #0f172a;
@@ -312,8 +296,6 @@
       color: #cbd5f5;
       font-size: 17px;
     }
-
-    /* ===== QUOTE FORM ===== */
 
     .quote-section {
       padding: 90px 20px;
@@ -369,7 +351,7 @@
       font-size: 18px;
       font-weight: bold;
       cursor: pointer;
-      transition: .3s;
+      transition: 0.3s;
     }
 
     .quote-form button:hover {
@@ -377,17 +359,13 @@
       transform: scale(1.02);
     }
 
-    /* ===== FOOTER ===== */
-
     footer {
       text-align: center;
       padding: 20px;
       background: #111827;
       font-size: 14px;
-      opacity: .8;
+      opacity: 0.8;
     }
-
-    /* ===== MOBILE ===== */
 
     @media (max-width: 768px) {
       header {
@@ -429,15 +407,12 @@
     }
   </style>
 </head>
-
 <body>
 
-  <!-- HEADER -->
   <header>
     <div class="header-container">
-
       <div class="logo-area">
-        <img src="logo.png" alt="NIS Pros Logo" class="logo">
+        <img src="images/logo.png" alt="NIS Pros Logo" class="logo">
         <div>
           <div class="brand">NIS Pros</div>
           <div class="tagline">Networking Infrastructure Solutions</div>
@@ -450,11 +425,9 @@
         <a href="#contact">Contact</a>
         <a href="#quote">Request Quote</a>
       </nav>
-
     </div>
   </header>
 
-  <!-- HERO -->
   <section class="hero">
     <div class="hero-content">
       <h1>Structured Cabling, Security Cameras & Commercial WiFi Installation in Houston</h1>
@@ -463,9 +436,7 @@
     </div>
   </section>
 
-  <!-- SERVICES -->
   <section id="services" class="services">
-
     <h2>Our Services</h2>
 
     <p class="section-intro">
@@ -473,9 +444,7 @@
     </p>
 
     <div class="services-grid">
-
-      <!-- Structured Cabling -->
-      <a href="structured-cabling.html" class="service-image">
+      <a href="pages/structured-cabling.html" class="service-image">
         <div class="service-overlay">
           <h3>Structured Cabling</h3>
           <ul class="service-list">
@@ -488,8 +457,7 @@
         </div>
       </a>
 
-      <!-- Security Systems -->
-      <a href="security-systems.html" class="security-image">
+      <a href="pages/security-systems.html" class="security-image">
         <div class="service-overlay">
           <h3>Security Systems</h3>
           <ul class="service-list">
@@ -502,8 +470,7 @@
         </div>
       </a>
 
-      <!-- Commercial WiFi -->
-      <a href="commercial-wifi.html" class="wifi-image">
+      <a href="pages/commercial-wifi.html" class="wifi-image">
         <div class="service-overlay">
           <h3>Commercial WiFi</h3>
           <ul class="service-list">
@@ -515,32 +482,25 @@
           </ul>
         </div>
       </a>
-
     </div>
-
   </section>
 
-  <!-- SERVICE AREAS -->
   <section id="areas" class="service-areas">
     <h2>Service Areas</h2>
-
     <p>
       We provide professional networking infrastructure services throughout Houston, Sugar Land, Katy, The Woodlands, Pasadena, Cypress, and surrounding areas.
     </p>
-
     <p class="bold-line">
       Serving Commercial & Residential Clients Across Texas
     </p>
   </section>
 
-  <!-- CONTACT -->
   <section id="contact" class="contact">
     <h2>Contact Us</h2>
     <p>📞 <a href="tel:8328448312">832-844-8312</a></p>
     <p>✉️ <a href="mailto:jason@nispros.net">jason@nispros.net</a></p>
   </section>
 
-  <!-- SEO CONTENT -->
   <section class="seo-section">
     <h2>Network Infrastructure Services in Houston, Texas</h2>
     <p>
@@ -548,7 +508,6 @@
     </p>
   </section>
 
-  <!-- QUOTE FORM -->
   <section id="quote" class="quote-section">
     <h2>Request a Quote</h2>
     <p class="quote-intro">
@@ -577,7 +536,6 @@
     </form>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     © 2026 NIS Pros — Houston, TX
   </footer>
