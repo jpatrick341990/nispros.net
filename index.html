@@ -11,6 +11,45 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "NIS Pros",
+    "image": "https://nispros.net/images/logo.png",
+    "url": "https://nispros.net",
+    "telephone": "+1-832-844-8312",
+    "email": "jason@nispros.net",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Houston",
+      "addressRegion": "TX",
+      "addressCountry": "US"
+    },
+    "areaServed": [
+      "Houston, TX",
+      "Sugar Land, TX",
+      "Katy, TX",
+      "The Woodlands, TX",
+      "Pasadena, TX",
+      "Cypress, TX",
+      "Pearland, TX",
+      "Baytown, TX",
+      "Deer Park, TX",
+      "La Porte, TX"
+    ],
+    "description": "NIS Pros provides structured cabling, security camera installation, commercial WiFi, and network infrastructure services in Houston, Texas and surrounding areas.",
+    "priceRange": "$$",
+    "serviceType": [
+      "Structured Cabling",
+      "Security Camera Installation",
+      "Commercial WiFi",
+      "Network Installation",
+      "Fiber Optic Cabling"
+    ]
+  }
+  </script>
+
   <style>
     html {
       scroll-behavior: smooth;
@@ -113,12 +152,17 @@
       width: 100%;
     }
 
-    /* DROPDOWN */
+      /* DROPDOWN */
 
-    .dropdown {
-      position: relative;
-      display: inline-block;
-    }
+.dropdown {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 18px;
+  margin-bottom: -18px;
+}
+
+.dropbtn {
+  background: transparent;
 
     .dropbtn {
       color: white;
@@ -128,7 +172,8 @@
       transition: color 0.3s ease;
       display: inline-flex;
       align-items: center;
-      gap: 6px;
+      gap: 8px;
+      cursor: pointer;
     }
 
     .dropbtn::after {
@@ -142,6 +187,11 @@
       transition: width 0.3s ease;
     }
 
+    .dropdown-icon {
+      font-size: 11px;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
     .dropdown:hover .dropbtn {
       color: #38bdf8;
     }
@@ -150,40 +200,61 @@
       width: 100%;
     }
 
+    .dropdown:hover .dropdown-icon {
+      transform: rotate(180deg);
+      color: #38bdf8;
+    }
+
     .dropdown-content {
-      display: none;
+      display: block;
       position: absolute;
-      top: calc(100% + 10px);
+      top: (100%);
       left: 0;
-      min-width: 240px;
-      background: #111827;
+      min-width: 260px;
+      background: rgba(17, 24, 39, 0.96);
       border: 1px solid #1f2937;
-      border-radius: 10px;
-      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.35);
+      border-radius: 12px;
+      box-shadow: 0 18px 34px rgba(0, 0, 0, 0.4);
       z-index: 1001;
       overflow: hidden;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: opacity 0.28s ease, transform 0.28s ease, visibility 0.28s ease;
+      backdrop-filter: blur(8px);
     }
 
     .dropdown-content a {
-      display: block;
-      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 13px 16px;
       color: #e2e8f0;
       text-decoration: none;
       font-size: 15px;
-      transition: background 0.3s ease, color 0.3s ease;
+      transition: background 0.3s ease, color 0.3s ease, padding-left 0.3s ease;
     }
 
     .dropdown-content a::after {
       display: none;
     }
 
+    .dropdown-content a i {
+      width: 18px;
+      color: #38bdf8;
+      text-align: center;
+    }
+
     .dropdown-content a:hover {
       background: #0f172a;
       color: #38bdf8;
+      padding-left: 20px;
     }
 
     .dropdown:hover .dropdown-content {
-      display: block;
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
     }
 
     /* QUOTE BUTTON */
@@ -271,7 +342,6 @@
       padding: 14px 32px;
       background: #38bdf8;
       color: black;
-      text-decoration: none;
       font-weight: bold;
       border-radius: 8px;
       font-size: 18px;
@@ -337,7 +407,7 @@
       background-repeat: no-repeat;
       box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
       color: inherit;
-      transition: 0.3s;
+      transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
       position: relative;
     }
 
@@ -374,6 +444,19 @@
       pointer-events: none;
     }
 
+    .service-image::after,
+    .security-image::after,
+    .wifi-image::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 12px;
+      box-shadow: inset 0 0 0 1px rgba(56,189,248,0);
+      transition: box-shadow 0.35s ease;
+      pointer-events: none;
+      z-index: 1;
+    }
+
     .service-image:hover::before,
     .security-image:hover::before,
     .wifi-image:hover::before {
@@ -383,11 +466,17 @@
     .service-image:hover,
     .security-image:hover,
     .wifi-image:hover {
-      transform: translateY(-8px);
+      transform: translateY(-10px);
       border-color: #38bdf8;
       box-shadow:
-        0 14px 28px rgba(0, 0, 0, 0.28),
-        0 0 28px rgba(56, 189, 248, 0.45);
+        0 18px 34px rgba(0, 0, 0, 0.3),
+        0 0 24px rgba(56, 189, 248, 0.18);
+    }
+
+    .service-image:hover::after,
+    .security-image:hover::after,
+    .wifi-image:hover::after {
+      box-shadow: inset 0 0 0 1px rgba(56,189,248,0.45);
     }
 
     .service-overlay {
@@ -574,12 +663,36 @@
       font-weight: bold;
     }
 
+    /* MAP SECTION */
+
+    .map-section {
+      padding: 90px 20px;
+      background: #111827;
+      text-align: center;
+    }
+
+    .map-wrap {
+      max-width: 1100px;
+      margin: 35px auto 0;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid #1f2937;
+      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.28);
+    }
+
+    .map-wrap iframe {
+      width: 100%;
+      height: 420px;
+      border: 0;
+      display: block;
+    }
+
     /* CONTACT */
 
     .contact {
       padding: 90px 20px;
       text-align: center;
-      background: #111827;
+      background: #0f172a;
     }
 
     .contact h2 {
@@ -602,7 +715,7 @@
     .seo-section {
       padding: 70px 20px;
       text-align: center;
-      background: #0f172a;
+      background: #0b1120;
     }
 
     .seo-section h2 {
@@ -821,7 +934,11 @@
 
       .dropdown-content {
         left: 50%;
-        transform: translateX(-50%);
+        transform: translateX(-50%) translateY(10px);
+      }
+
+      .dropdown:hover .dropdown-content {
+        transform: translateX(-50%) translateY(0);
       }
 
       .call-btn,
@@ -852,6 +969,10 @@
       .service-overlay h3 {
         font-size: 26px;
       }
+
+      .map-wrap iframe {
+        height: 320px;
+      }
     }
   </style>
 </head>
@@ -859,7 +980,6 @@
 
   <header>
     <div class="header-container">
-
       <div class="logo-area">
         <img src="images/logo.png" alt="NIS Pros Logo" class="logo">
         <div>
@@ -870,11 +990,14 @@
 
       <nav>
         <div class="dropdown">
-          <a href="#services" class="dropbtn">Services <i class="fa-solid fa-chevron-down" style="font-size: 12px;"></i></a>
+          <a href="#services" class="dropbtn">
+            Services
+            <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+          </a>
           <div class="dropdown-content">
-            <a href="pages/structured-cabling.html">Structured Cabling</a>
-            <a href="pages/security-systems.html">Security Systems</a>
-            <a href="pages/commercial-wifi.html">Commercial WiFi</a>
+            <a href="pages/structured-cabling.html"><i class="fa-solid fa-network-wired"></i> Structured Cabling</a>
+            <a href="pages/security-systems.html"><i class="fa-solid fa-video"></i> Security Systems</a>
+            <a href="pages/commercial-wifi.html"><i class="fa-solid fa-wifi"></i> Commercial WiFi</a>
           </div>
         </div>
 
@@ -883,7 +1006,6 @@
         <a href="#quote" class="quote-button">Request Quote</a>
         <a href="tel:8328448312" class="call-btn">📞 Call Now</a>
       </nav>
-
     </div>
   </header>
 
@@ -903,7 +1025,6 @@
     </p>
 
     <div class="services-grid">
-
       <a href="pages/structured-cabling.html" class="service-image">
         <div class="service-overlay">
           <h3><i class="fa-solid fa-network-wired"></i> Structured Cabling</h3>
@@ -942,7 +1063,6 @@
           </ul>
         </div>
       </a>
-
     </div>
   </section>
 
@@ -1073,6 +1193,22 @@
     <p class="bold-line">
       Serving Commercial & Residential Clients Across Texas
     </p>
+  </section>
+
+  <section class="map-section">
+    <h2 class="section-title">Serving Houston and Surrounding Areas</h2>
+    <p class="section-intro">
+      NIS Pros provides network infrastructure services throughout the greater Houston area for offices, warehouses, retail spaces, and commercial properties.
+    </p>
+
+    <div class="map-wrap">
+      <iframe
+        src="https://www.google.com/maps?q=Houston,TX&output=embed"
+        loading="lazy"
+        allowfullscreen
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
   </section>
 
   <section id="contact" class="contact">
