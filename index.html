@@ -317,21 +317,55 @@
     /* HERO */
 
     .hero {
-      text-align: center;
-      padding: 160px 20px;
-      background:
-        radial-gradient(circle at center, rgba(56,189,248,0.15), transparent 60%),
-        linear-gradient(rgba(2,6,23,0.75), rgba(2,6,23,0.90)),
-        url("images/background.jpeg");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: 160px 20px;
+  background:
+    linear-gradient(rgba(2,6,23,0.78), rgba(2,6,23,0.92)),
+    url("images/background.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
-    .hero-content {
-      max-width: 950px;
-      margin: auto;
-    }
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: -20%;
+  background:
+    radial-gradient(circle at 30% 40%, rgba(56,189,248,0.18), transparent 28%),
+    radial-gradient(circle at 70% 30%, rgba(14,165,233,0.14), transparent 24%),
+    radial-gradient(circle at 50% 75%, rgba(37,99,235,0.12), transparent 26%);
+  filter: blur(30px);
+  animation: heroGlowMove 10s ease-in-out infinite alternate;
+  pointer-events: none;
+  z-index: 1;
+}
+@keyframes heroGlowMove {
+  0% {
+    transform: translate3d(-10px, -6px, 0) scale(1);
+  }
+  100% {
+    transform: translate3d(12px, 8px, 0) scale(1.06);
+  }
+}
+    
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(15,23,42,0.08), rgba(15,23,42,0.22));
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 950px;
+  margin: auto;
+}
 
     .hero h1 {
       font-size: 48px;
