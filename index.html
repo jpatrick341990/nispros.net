@@ -549,25 +549,76 @@
       color: #cbd5e1;
       margin-bottom: 0;
     }
+
+    /* WHY TOGGLE */
+
+    .why-toggle {
+      max-width: 1100px;
+      margin: auto;
+    }
+
     .why-toggle summary {
-  cursor: pointer;
-  list-style: none;
-  text-align: center;
-}
+      cursor: pointer;
+      list-style: none;
+      text-align: center;
+      background: #0f172a;
+      border: 1px solid #1f2937;
+      border-radius: 14px;
+      padding: 22px 28px;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+      transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+      user-select: none;
+    }
 
-.why-toggle summary::-webkit-details-marker {
-  display: none;
-}
+    .why-toggle summary:hover {
+      border-color: #38bdf8;
+      box-shadow:
+        0 14px 28px rgba(0, 0, 0, 0.22),
+        0 0 20px rgba(56, 189, 248, 0.12);
+      transform: translateY(-2px);
+    }
 
-.why-toggle summary::after {
-  content: " ▼";
-  font-size: 16px;
-}
+    .why-toggle summary::-webkit-details-marker {
+      display: none;
+    }
 
-.why-toggle[open] summary::after {
-  content: " ▲";
-}
-    
+    .why-toggle summary::after {
+      content: "▼";
+      display: inline-block;
+      margin-left: 12px;
+      font-size: 16px;
+      color: #38bdf8;
+      transition: transform 0.3s ease;
+    }
+
+    .why-toggle[open] summary::after {
+      transform: rotate(180deg);
+    }
+
+    .why-toggle[open] .section-intro,
+    .why-toggle[open] .why-grid {
+      animation: fadeInWhy 0.35s ease;
+    }
+
+    @keyframes fadeInWhy {
+      from {
+        opacity: 0;
+        transform: translateY(-6px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .why-toggle .section-intro {
+      margin-top: 28px;
+    }
+
+    .why-toggle .why-grid {
+      margin-top: 28px;
+    }
+
     /* TECHNOLOGY SECTION */
 
     .technology-section {
@@ -958,394 +1009,4 @@
 
       .call-btn,
       .quote-button {
-        margin-left: 0;
-      }
-
-      .hero {
-        padding: 120px 20px;
-      }
-
-      .hero h1 {
-        font-size: 34px;
-      }
-
-      .hero p {
-        font-size: 18px;
-      }
-
-      .section-title,
-      .service-areas h2,
-      .contact h2,
-      .seo-section h2,
-      .quote-section h2 {
-        font-size: 30px;
-      }
-
-      .service-overlay h3 {
-        font-size: 26px;
-      }
-
-      .map-wrap iframe {
-        height: 320px;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    <div class="header-container">
-      <div class="logo-area">
-        <img src="images/logo.png" alt="NIS Pros Logo" class="logo">
-        <div>
-          <div class="brand">NIS Pros</div>
-          <div class="tagline">Networking Infrastructure Solutions</div>
-        </div>
-      </div>
-
-      <nav>
-        <div class="dropdown">
-          <a href="#services" class="dropbtn">
-            Services
-            <i class="fa-solid fa-chevron-down dropdown-icon"></i>
-          </a>
-          <div class="dropdown-content">
-            <a href="pages/structured-cabling.html"><i class="fa-solid fa-network-wired"></i> Structured Cabling</a>
-            <a href="pages/security-systems.html"><i class="fa-solid fa-video"></i> Security Systems</a>
-            <a href="pages/commercial-wifi.html"><i class="fa-solid fa-wifi"></i> Commercial WiFi</a>
-          </div>
-        </div>
-
-        <a href="#areas">Service Areas</a>
-        <a href="#contact">Contact</a>
-        <a href="#quote" class="quote-button">Request Quote</a>
-        <a href="tel:8328448312" class="call-btn">📞 Call Now</a>
-      </nav>
-    </div>
-  </header>
-
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Structured Cabling, Security Cameras & Commercial WiFi Installation in Houston</h1>
-      <p>Professional network infrastructure solutions for offices, warehouses, retail spaces, and commercial properties.</p>
-      <a class="btn" href="#quote">Request a Quote</a>
-    </div>
-  </section>
-
-  <section id="services" class="services">
-    <h2 class="section-title">Our Services</h2>
-
-    <p class="section-intro">
-      NIS Pros delivers clean, dependable network infrastructure solutions for businesses across Houston and surrounding areas.
-    </p>
-
-    <div class="services-grid">
-      <a href="pages/structured-cabling.html" class="service-image">
-        <div class="service-overlay">
-          <h3><i class="fa-solid fa-network-wired"></i> Structured Cabling</h3>
-          <ul class="service-list">
-            <li>Cat6 Installation</li>
-            <li>Fiber Optic Cabling</li>
-            <li>Network Racks</li>
-            <li>Patch Panels</li>
-            <li>Cable Management</li>
-          </ul>
-        </div>
-      </a>
-
-      <a href="pages/security-systems.html" class="security-image">
-        <div class="service-overlay">
-          <h3><i class="fa-solid fa-video"></i> Security Systems</h3>
-          <ul class="service-list">
-            <li>Camera Installation</li>
-            <li>Surveillance Systems</li>
-            <li>CCTV Setup</li>
-            <li>Access Control</li>
-            <li>Commercial Monitoring</li>
-          </ul>
-        </div>
-      </a>
-
-      <a href="pages/commercial-wifi.html" class="wifi-image">
-        <div class="service-overlay">
-          <h3><i class="fa-solid fa-wifi"></i> Commercial WiFi</h3>
-          <ul class="service-list">
-            <li>Wireless Access Points</li>
-            <li>Office WiFi Setup</li>
-            <li>Warehouse Coverage</li>
-            <li>Network Optimization</li>
-            <li>Business Wireless Networks</li>
-          </ul>
-        </div>
-      </a>
-    </div>
-  </section>
-
-  <section class="why-choose">
-    <h2 class="section-title">Why Choose NIS Pros</h2>
-    <p class="section-intro">
-      We focus on dependable installs, organized workmanship, and practical solutions for businesses that need reliable connectivity.
-    </p>
-
-    <div class="why-grid">
-      <div class="why-card">
-        <h3>Professional Installation</h3>
-        <p>Clean structured cabling, organized terminations, and dependable network infrastructure built for long-term performance.</p>
-      </div>
-
-      <div class="why-card">
-        <h3>Commercial-Focused Solutions</h3>
-        <p>We design and install systems for offices, warehouses, retail spaces, and other business environments.</p>
-      </div>
-
-      <div class="why-card">
-        <h3>Scalable Infrastructure</h3>
-        <p>From a few drops to full business expansions, our work is planned to support growth and future upgrades.</p>
-      </div>
-
-      <div class="why-card">
-        <h3>Houston-Based Service</h3>
-        <p>Local service with responsive communication for businesses in Houston and surrounding areas.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="technology-section">
-    <h2 class="section-title">Technology Focus</h2>
-    <p class="section-intro">
-      We install practical infrastructure solutions that support business connectivity, security, and day-to-day operations.
-    </p>
-
-    <div class="tech-grid">
-      <div class="tech-card">
-        <h3>Structured Cabling</h3>
-        <ul>
-          <li>Cat6 and Cat6A cabling</li>
-          <li>Patch panels and terminations</li>
-          <li>Rack organization and cable management</li>
-        </ul>
-      </div>
-
-      <div class="tech-card">
-        <h3>Commercial WiFi</h3>
-        <ul>
-          <li>Access point placement</li>
-          <li>Coverage planning</li>
-          <li>Business wireless networks</li>
-        </ul>
-      </div>
-
-      <div class="tech-card">
-        <h3>Security Camera Infrastructure</h3>
-        <ul>
-          <li>PoE camera cabling</li>
-          <li>NVR connectivity</li>
-          <li>Organized low-voltage routing</li>
-        </ul>
-      </div>
-
-      <div class="tech-card">
-        <h3>Network Installation</h3>
-        <ul>
-          <li>Switches and routers</li>
-          <li>Low voltage infrastructure</li>
-          <li>Small business network deployment</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section class="projects-section">
-    <h2 class="section-title">Project Examples</h2>
-    <p class="section-intro">
-      Here are examples of the types of business projects NIS Pros can quote and install.
-    </p>
-
-    <div class="projects-grid">
-      <div class="project-card">
-        <h3>Office Network Installation</h3>
-        <ul>
-          <li>Cat6 cabling to workstations</li>
-          <li>Wireless access point installation</li>
-          <li>Switch and rack organization</li>
-        </ul>
-      </div>
-
-      <div class="project-card">
-        <h3>Warehouse Camera System</h3>
-        <ul>
-          <li>Interior and exterior camera drops</li>
-          <li>NVR and PoE switch setup</li>
-          <li>Organized cable routing</li>
-        </ul>
-      </div>
-
-      <div class="project-card">
-        <h3>Retail WiFi Upgrade</h3>
-        <ul>
-          <li>Improved customer and staff coverage</li>
-          <li>Access point replacement</li>
-          <li>Cleaner business network layout</li>
-        </ul>
-      </div>
-
-      <div class="project-card">
-        <h3>Business Expansion Cabling</h3>
-        <ul>
-          <li>New workstations and data drops</li>
-          <li>Patch panel additions</li>
-          <li>Scalable infrastructure upgrades</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section id="areas" class="service-areas">
-    <h2>Service Areas</h2>
-    <p>
-      Houston, Sugar Land, Katy, The Woodlands, Pasadena, Cypress, Pearland, Baytown, Deer Park, La Porte, and surrounding areas.
-    </p>
-    <p class="bold-line">
-      Serving Commercial & Residential Clients Across Texas
-    </p>
-  </section>
-
-  <section class="map-section">
-    <h2 class="section-title">Serving Houston and Surrounding Areas</h2>
-    <p class="section-intro">
-      NIS Pros provides network infrastructure services throughout the greater Houston area for offices, warehouses, retail spaces, and commercial properties.
-    </p>
-
-    <div class="map-wrap">
-      <iframe
-        src="https://www.google.com/maps?q=Houston,TX&output=embed"
-        loading="lazy"
-        allowfullscreen
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
-    </div>
-  </section>
-
-  <section id="contact" class="contact">
-    <h2>Contact Us</h2>
-    <p>📞 <a href="tel:8328448312">832-844-8312</a></p>
-    <p>✉️ <a href="mailto:jason@nispros.net">jason@nispros.net</a></p>
-  </section>
-
-  <section class="seo-section">
-    <h2>Network Infrastructure Services in Houston, Texas</h2>
-    <p>
-      NIS Pros provides professional structured cabling, security camera installation, commercial WiFi systems, and network infrastructure services throughout Houston and surrounding areas.
-    </p>
-  </section>
-
-  <section id="quote" class="quote-section">
-    <h2>Request a Quote</h2>
-    <p class="quote-intro">Tell us about your project and we’ll reach out with the next steps.</p>
-
-    <div class="quote-layout">
-      <div class="quote-card">
-        <h3>Project Request Form</h3>
-
-        <form action="https://formsubmit.co/jason@nispros.net" method="POST" class="quote-form">
-          <input type="hidden" name="_subject" value="New Quote Request - NIS Pros">
-          <input type="hidden" name="_captcha" value="false">
-
-          <div class="quote-form-row">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="text" name="company" placeholder="Company Name">
-          </div>
-
-          <div class="quote-form-row">
-            <input type="email" name="email" placeholder="Your Email" required>
-            <input type="tel" name="phone" placeholder="Phone Number">
-          </div>
-
-          <div class="quote-form-row">
-            <select name="service">
-              <option value="">Service Needed</option>
-              <option>Structured Cabling</option>
-              <option>Security Cameras</option>
-              <option>Commercial WiFi</option>
-              <option>Network Installation</option>
-              <option>Fiber Optic Cabling</option>
-              <option>Other</option>
-            </select>
-
-            <input type="text" name="location" placeholder="Project Location">
-          </div>
-
-          <div class="quote-form-row">
-            <select name="timeline">
-              <option value="">Project Timeline</option>
-              <option>As soon as possible</option>
-              <option>Within 1-2 weeks</option>
-              <option>Within 30 days</option>
-              <option>Planning / Budgeting</option>
-            </select>
-
-            <select name="budget">
-              <option value="">Estimated Budget</option>
-              <option>Under $1,000</option>
-              <option>$1,000 - $5,000</option>
-              <option>$5,000 - $10,000</option>
-              <option>$10,000+</option>
-            </select>
-          </div>
-
-          <textarea name="message" rows="6" placeholder="Tell us about the project, building type, number of cable runs, cameras, access points, or any other details."></textarea>
-
-          <button type="submit">Send Quote Request</button>
-        </form>
-      </div>
-
-      <div class="quote-card">
-        <h3>Why Businesses Contact Us</h3>
-        <ul class="quote-side-list">
-          <li>Structured cabling for offices and commercial properties</li>
-          <li>Commercial WiFi upgrades and access point installs</li>
-          <li>Security camera infrastructure and low-voltage routing</li>
-          <li>Clean, organized rack and patch panel work</li>
-          <li>Houston-based service for local businesses</li>
-        </ul>
-
-        <div class="highlight-box">
-          <strong>Helpful details to include:</strong><br>
-          Building size, service needed, number of data drops or cameras, project location, and expected timeline.
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="footer-container">
-      <div class="footer-column">
-        <h3>NIS Pros</h3>
-        <p>Professional network infrastructure services for Houston businesses and surrounding areas.</p>
-      </div>
-
-      <div class="footer-column">
-        <h3>Services</h3>
-        <ul>
-          <li>Structured Cabling</li>
-          <li>Security Cameras</li>
-          <li>Commercial WiFi</li>
-          <li>Network Installation</li>
-        </ul>
-      </div>
-
-      <div class="footer-column">
-        <h3>Contact</h3>
-        <p><a href="tel:8328448312">832-844-8312</a></p>
-        <p><a href="mailto:jason@nispros.net">jason@nispros.net</a></p>
-        <p>Houston, Texas</p>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      © 2026 NIS Pros — Houston, TX
-    </div>
-  </footer>
-
-</body>
-</html>
+        margin-left
