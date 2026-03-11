@@ -28,6 +28,10 @@
       line-height: 1.6;
     }
 
+    a {
+      text-decoration: none;
+    }
+
     /* HEADER */
 
     header {
@@ -109,15 +113,39 @@
       width: 100%;
     }
 
+    /* QUOTE BUTTON */
+
+    .quote-button {
+      display: inline-block;
+      background: linear-gradient(135deg, #0ea5e9, #2563eb);
+      color: white !important;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      white-space: nowrap;
+      box-shadow: 0 10px 24px rgba(37, 99, 235, 0.25);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .quote-button::after {
+      display: none;
+    }
+
+    .quote-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 28px rgba(37, 99, 235, 0.35);
+      color: white !important;
+    }
+
     /* CALL BUTTON */
 
     .call-btn {
       background: #38bdf8;
       color: black !important;
-      padding: 8px 16px;
+      padding: 10px 16px;
       border-radius: 6px;
       font-weight: bold;
-      margin-left: 8px;
+      margin-left: 4px;
       transition: all 0.3s ease;
     }
 
@@ -179,17 +207,13 @@
       transform: scale(1.05);
     }
 
-    /* SERVICES */
+    /* GENERAL SECTION */
 
-    .services {
-      padding: 90px 20px;
-      text-align: center;
-    }
-
-    .services h2 {
+    .section-title {
       color: #38bdf8;
       font-size: 36px;
       margin-bottom: 10px;
+      text-align: center;
     }
 
     .section-intro {
@@ -198,6 +222,14 @@
       color: #cbd5f5;
       margin-bottom: 40px;
       font-size: 17px;
+      text-align: center;
+    }
+
+    /* SERVICES */
+
+    .services {
+      padding: 90px 20px;
+      text-align: center;
     }
 
     .services-grid {
@@ -211,31 +243,28 @@
 
     /* SERVICE CARDS */
 
-  .service-image,
-  .security-image,
-  .wifi-image {
-   height: 300px;
-   max-width: 380px;
-   width: 100%;
+    .service-image,
+    .security-image,
+    .wifi-image {
+      height: 300px;
+      max-width: 380px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      border-radius: 12px;
+      border: 1px solid #334155;
+      overflow: hidden;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+      text-decoration: none;
+      color: inherit;
+      transition: 0.3s;
+      position: relative;
+    }
 
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-
-  border-radius: 12px;
-  border: 1px solid #334155;
-  overflow: hidden;
-
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
-  text-decoration: none;
-  color: inherit;
-  transition: 0.3s;
-  position: relative;
-}
     .service-image {
       background-image: url("images/structured-cabling.jpg");
     }
@@ -325,10 +354,122 @@
       margin-bottom: 8px;
     }
 
+    /* WHY CHOOSE US */
+
+    .why-choose {
+      padding: 90px 20px;
+      background: #111827;
+    }
+
+    .why-grid {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .why-card {
+      background: #0f172a;
+      border: 1px solid #1f2937;
+      border-radius: 14px;
+      padding: 24px;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+    }
+
+    .why-card h3 {
+      margin-top: 0;
+      color: #f8fafc;
+      font-size: 22px;
+    }
+
+    .why-card p {
+      color: #cbd5e1;
+      margin-bottom: 0;
+    }
+
+    /* TECHNOLOGY SECTION */
+
+    .technology-section {
+      padding: 90px 20px;
+      background: #0b1120;
+    }
+
+    .tech-grid {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .tech-card {
+      background: #111827;
+      border: 1px solid #1f2937;
+      border-radius: 14px;
+      padding: 24px;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+    }
+
+    .tech-card h3 {
+      margin-top: 0;
+      color: #f8fafc;
+      font-size: 22px;
+    }
+
+    .tech-card ul {
+      margin: 0;
+      padding-left: 18px;
+      color: #cbd5e1;
+    }
+
+    .tech-card li {
+      margin-bottom: 8px;
+    }
+
+    /* PROJECT EXAMPLES */
+
+    .projects-section {
+      padding: 90px 20px;
+      background: #0f172a;
+    }
+
+    .projects-grid {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .project-card {
+      background: #111827;
+      border: 1px solid #1f2937;
+      border-radius: 14px;
+      padding: 24px;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+    }
+
+    .project-card h3 {
+      margin-top: 0;
+      color: #f8fafc;
+      font-size: 22px;
+    }
+
+    .project-card ul {
+      margin: 0;
+      padding-left: 18px;
+      color: #cbd5e1;
+    }
+
+    .project-card li {
+      margin-bottom: 8px;
+    }
+
     /* SERVICE AREAS */
 
     .service-areas {
-      padding: 12px 20px;
+      padding: 50px 20px;
       text-align: center;
       scroll-margin-top: 80px;
       background:
@@ -371,6 +512,11 @@
       margin: 0 0 20px 0;
     }
 
+    .contact p {
+      color: #e2e8f0;
+      font-size: 18px;
+    }
+
     .contact a {
       color: #38bdf8;
       text-decoration: none;
@@ -402,36 +548,64 @@
     .quote-section {
       padding: 90px 20px;
       background: #0b1120;
-      text-align: center;
     }
 
     .quote-section h2 {
       color: #38bdf8;
       font-size: 36px;
       margin: 0 0 10px 0;
+      text-align: center;
     }
 
     .quote-intro {
       color: #cbd5f5;
-      margin-bottom: 30px;
+      margin-bottom: 40px;
       font-size: 17px;
+      text-align: center;
+    }
+
+    .quote-layout {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .quote-card {
+      background: #111827;
+      border: 1px solid #1f2937;
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    .quote-card h3 {
+      margin-top: 0;
+      color: #f8fafc;
+      font-size: 24px;
     }
 
     .quote-form {
-      max-width: 600px;
-      margin: auto;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
+      display: grid;
+      gap: 16px;
+    }
+
+    .quote-form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
     }
 
     .quote-form input,
     .quote-form select,
     .quote-form textarea {
+      width: 100%;
       padding: 14px;
       border-radius: 8px;
       border: 1px solid #334155;
-      background: #111827;
+      background: #0f172a;
       color: white;
       font-size: 16px;
     }
@@ -441,32 +615,108 @@
       color: #94a3b8;
     }
 
+    .quote-form textarea {
+      resize: vertical;
+      min-height: 140px;
+    }
+
     .quote-form button {
       padding: 14px;
-      background: #38bdf8;
+      background: linear-gradient(135deg, #0ea5e9, #2563eb);
+      color: white;
       border: none;
       border-radius: 8px;
       font-weight: bold;
       font-size: 18px;
       cursor: pointer;
       transition: 0.3s;
+      box-shadow: 0 10px 24px rgba(37, 99, 235, 0.25);
     }
 
     .quote-form button:hover {
-      background: #0ea5e9;
+      transform: translateY(-2px);
+      box-shadow: 0 14px 28px rgba(37, 99, 235, 0.35);
+    }
+
+    .quote-side-list {
+      margin: 0;
+      padding-left: 18px;
+      color: #cbd5e1;
+    }
+
+    .quote-side-list li {
+      margin-bottom: 10px;
+    }
+
+    .highlight-box {
+      margin-top: 24px;
+      padding: 18px;
+      border-radius: 12px;
+      background: rgba(14, 165, 233, 0.08);
+      border: 1px solid rgba(56, 189, 248, 0.22);
+      color: #cbd5e1;
+    }
+
+    .highlight-box strong {
+      color: #f8fafc;
     }
 
     /* FOOTER */
 
     footer {
-      text-align: center;
-      padding: 20px;
       background: #111827;
+      padding: 40px 20px;
+    }
+
+    .footer-container {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .footer-column h3 {
+      margin-top: 0;
+      color: #f8fafc;
+    }
+
+    .footer-column p,
+    .footer-column li,
+    .footer-column a {
+      color: #94a3b8;
+      font-size: 15px;
+      margin: 0 0 10px 0;
+      text-decoration: none;
+    }
+
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 25px;
+      margin-top: 25px;
+      border-top: 1px solid #1f2937;
+      color: #94a3b8;
       font-size: 14px;
-      opacity: 0.8;
     }
 
     /* MOBILE */
+
+    @media (max-width: 900px) {
+      .why-grid,
+      .tech-grid,
+      .projects-grid,
+      .quote-layout,
+      .footer-container,
+      .quote-form-row {
+        grid-template-columns: 1fr;
+      }
+    }
 
     @media (max-width: 768px) {
       header {
@@ -486,8 +736,8 @@
         justify-content: center;
       }
 
-      .call-btn {
-        padding: 10px 18px;
+      .call-btn,
+      .quote-button {
         margin-left: 0;
       }
 
@@ -503,7 +753,7 @@
         font-size: 18px;
       }
 
-      .services h2,
+      .section-title,
       .service-areas h2,
       .contact h2,
       .seo-section h2,
@@ -534,7 +784,7 @@
         <a href="#services">Services</a>
         <a href="#areas">Service Areas</a>
         <a href="#contact">Contact</a>
-        <a href="#quote">Request Quote</a>
+        <a href="#quote" class="quote-button">Request Quote</a>
         <a href="tel:8328448312" class="call-btn">📞 Call Now</a>
       </nav>
 
@@ -550,7 +800,7 @@
   </section>
 
   <section id="services" class="services">
-    <h2>Our Services</h2>
+    <h2 class="section-title">Our Services</h2>
 
     <p class="section-intro">
       NIS Pros delivers clean, dependable network infrastructure solutions for businesses across Houston and surrounding areas.
@@ -600,10 +850,129 @@
     </div>
   </section>
 
+  <section class="why-choose">
+    <h2 class="section-title">Why Choose NIS Pros</h2>
+    <p class="section-intro">
+      We focus on dependable installs, organized workmanship, and practical solutions for businesses that need reliable connectivity.
+    </p>
+
+    <div class="why-grid">
+      <div class="why-card">
+        <h3>Professional Installation</h3>
+        <p>Clean structured cabling, organized terminations, and dependable network infrastructure built for long-term performance.</p>
+      </div>
+
+      <div class="why-card">
+        <h3>Commercial-Focused Solutions</h3>
+        <p>We design and install systems for offices, warehouses, retail spaces, and other business environments.</p>
+      </div>
+
+      <div class="why-card">
+        <h3>Scalable Infrastructure</h3>
+        <p>From a few drops to full business expansions, our work is planned to support growth and future upgrades.</p>
+      </div>
+
+      <div class="why-card">
+        <h3>Houston-Based Service</h3>
+        <p>Local service with responsive communication for businesses in Houston and surrounding areas.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="technology-section">
+    <h2 class="section-title">Technology Focus</h2>
+    <p class="section-intro">
+      We install practical infrastructure solutions that support business connectivity, security, and day-to-day operations.
+    </p>
+
+    <div class="tech-grid">
+      <div class="tech-card">
+        <h3>Structured Cabling</h3>
+        <ul>
+          <li>Cat6 and Cat6A cabling</li>
+          <li>Patch panels and terminations</li>
+          <li>Rack organization and cable management</li>
+        </ul>
+      </div>
+
+      <div class="tech-card">
+        <h3>Commercial WiFi</h3>
+        <ul>
+          <li>Access point placement</li>
+          <li>Coverage planning</li>
+          <li>Business wireless networks</li>
+        </ul>
+      </div>
+
+      <div class="tech-card">
+        <h3>Security Camera Infrastructure</h3>
+        <ul>
+          <li>PoE camera cabling</li>
+          <li>NVR connectivity</li>
+          <li>Organized low-voltage routing</li>
+        </ul>
+      </div>
+
+      <div class="tech-card">
+        <h3>Network Installation</h3>
+        <ul>
+          <li>Switches and routers</li>
+          <li>Low voltage infrastructure</li>
+          <li>Small business network deployment</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="projects-section">
+    <h2 class="section-title">Project Examples</h2>
+    <p class="section-intro">
+      Here are examples of the types of business projects NIS Pros can quote and install.
+    </p>
+
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3>Office Network Installation</h3>
+        <ul>
+          <li>Cat6 cabling to workstations</li>
+          <li>Wireless access point installation</li>
+          <li>Switch and rack organization</li>
+        </ul>
+      </div>
+
+      <div class="project-card">
+        <h3>Warehouse Camera System</h3>
+        <ul>
+          <li>Interior and exterior camera drops</li>
+          <li>NVR and PoE switch setup</li>
+          <li>Organized cable routing</li>
+        </ul>
+      </div>
+
+      <div class="project-card">
+        <h3>Retail WiFi Upgrade</h3>
+        <ul>
+          <li>Improved customer and staff coverage</li>
+          <li>Access point replacement</li>
+          <li>Cleaner business network layout</li>
+        </ul>
+      </div>
+
+      <div class="project-card">
+        <h3>Business Expansion Cabling</h3>
+        <ul>
+          <li>New workstations and data drops</li>
+          <li>Patch panel additions</li>
+          <li>Scalable infrastructure upgrades</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
   <section id="areas" class="service-areas">
     <h2>Service Areas</h2>
     <p>
-      Houston, Sugar Land, Katy, The Woodlands, Pasadena, Cypress, and surrounding areas.
+      Houston, Sugar Land, Katy, The Woodlands, Pasadena, Cypress, Pearland, Baytown, Deer Park, La Porte, and surrounding areas.
     </p>
     <p class="bold-line">
       Serving Commercial & Residential Clients Across Texas
@@ -625,32 +994,110 @@
 
   <section id="quote" class="quote-section">
     <h2>Request a Quote</h2>
-    <p class="quote-intro">Tell us about your project and we'll get back to you.</p>
+    <p class="quote-intro">Tell us about your project and we’ll reach out with the next steps.</p>
 
-    <form action="https://formsubmit.co/jason@nispros.net" method="POST" class="quote-form">
-      <input type="hidden" name="_subject" value="New Quote Request - NIS Pros">
-      <input type="hidden" name="_captcha" value="false">
+    <div class="quote-layout">
+      <div class="quote-card">
+        <h3>Project Request Form</h3>
 
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <input type="tel" name="phone" placeholder="Phone Number">
+        <form action="https://formsubmit.co/jason@nispros.net" method="POST" class="quote-form">
+          <input type="hidden" name="_subject" value="New Quote Request - NIS Pros">
+          <input type="hidden" name="_captcha" value="false">
 
-      <select name="service">
-        <option value="">Service Needed</option>
-        <option>Structured Cabling</option>
-        <option>Security Cameras</option>
-        <option>Commercial WiFi</option>
-        <option>Other</option>
-      </select>
+          <div class="quote-form-row">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="text" name="company" placeholder="Company Name">
+          </div>
 
-      <textarea name="message" rows="5" placeholder="Tell us about the project..."></textarea>
+          <div class="quote-form-row">
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="tel" name="phone" placeholder="Phone Number">
+          </div>
 
-      <button type="submit">Send Quote Request</button>
-    </form>
+          <div class="quote-form-row">
+            <select name="service">
+              <option value="">Service Needed</option>
+              <option>Structured Cabling</option>
+              <option>Security Cameras</option>
+              <option>Commercial WiFi</option>
+              <option>Network Installation</option>
+              <option>Fiber Optic Cabling</option>
+              <option>Other</option>
+            </select>
+
+            <input type="text" name="location" placeholder="Project Location">
+          </div>
+
+          <div class="quote-form-row">
+            <select name="timeline">
+              <option value="">Project Timeline</option>
+              <option>As soon as possible</option>
+              <option>Within 1-2 weeks</option>
+              <option>Within 30 days</option>
+              <option>Planning / Budgeting</option>
+            </select>
+
+            <select name="budget">
+              <option value="">Estimated Budget</option>
+              <option>Under $1,000</option>
+              <option>$1,000 - $5,000</option>
+              <option>$5,000 - $10,000</option>
+              <option>$10,000+</option>
+            </select>
+          </div>
+
+          <textarea name="message" rows="6" placeholder="Tell us about the project, building type, number of cable runs, cameras, access points, or any other details."></textarea>
+
+          <button type="submit">Send Quote Request</button>
+        </form>
+      </div>
+
+      <div class="quote-card">
+        <h3>Why Businesses Contact Us</h3>
+        <ul class="quote-side-list">
+          <li>Structured cabling for offices and commercial properties</li>
+          <li>Commercial WiFi upgrades and access point installs</li>
+          <li>Security camera infrastructure and low-voltage routing</li>
+          <li>Clean, organized rack and patch panel work</li>
+          <li>Houston-based service for local businesses</li>
+        </ul>
+
+        <div class="highlight-box">
+          <strong>Helpful details to include:</strong><br>
+          Building size, service needed, number of data drops or cameras, project location, and expected timeline.
+        </div>
+      </div>
+    </div>
   </section>
 
   <footer>
-    © 2026 NIS Pros — Houston, TX
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3>NIS Pros</h3>
+        <p>Professional network infrastructure services for Houston businesses and surrounding areas.</p>
+      </div>
+
+      <div class="footer-column">
+        <h3>Services</h3>
+        <ul>
+          <li>Structured Cabling</li>
+          <li>Security Cameras</li>
+          <li>Commercial WiFi</li>
+          <li>Network Installation</li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>Contact</h3>
+        <p><a href="tel:8328448312">832-844-8312</a></p>
+        <p><a href="mailto:jason@nispros.net">jason@nispros.net</a></p>
+        <p>Houston, Texas</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © 2026 NIS Pros — Houston, TX
+    </div>
   </footer>
 
 </body>
