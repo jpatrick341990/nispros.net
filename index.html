@@ -549,7 +549,25 @@
       color: #cbd5e1;
       margin-bottom: 0;
     }
+    .why-toggle summary {
+  cursor: pointer;
+  list-style: none;
+  text-align: center;
+}
 
+.why-toggle summary::-webkit-details-marker {
+  display: none;
+}
+
+.why-toggle summary::after {
+  content: " ▼";
+  font-size: 16px;
+}
+
+.why-toggle[open] summary::after {
+  content: " ▲";
+}
+    
     /* TECHNOLOGY SECTION */
 
     .technology-section {
