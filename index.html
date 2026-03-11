@@ -161,15 +161,18 @@
     /* HERO */
 
     .hero {
-      text-align: center;
-      padding: 160px 20px;
-      background:
-        linear-gradient(rgba(2, 6, 23, 0.35), rgba(15, 23, 42, 0.50)),
-        url("images/background.jpeg");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
+  text-align: center;
+  padding: 160px 20px;
+
+  background:
+    radial-gradient(circle at center, rgba(56,189,248,0.15), transparent 60%),
+    linear-gradient(rgba(2,6,23,0.75), rgba(2,6,23,0.90)),
+    url("images/background.jpeg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
     .hero-content {
       max-width: 950px;
@@ -177,11 +180,15 @@
     }
 
     .hero h1 {
-      font-size: 48px;
-      color: #38bdf8;
-      margin-bottom: 20px;
-      line-height: 1.2;
-    }
+  font-size: 48px;
+  color: #38bdf8;
+  margin-bottom: 20px;
+  line-height: 1.2;
+
+  text-shadow:
+    0 4px 18px rgba(0,0,0,0.6),
+    0 0 25px rgba(56,189,248,0.25);
+}
 
     .hero p {
       font-size: 20px;
@@ -546,9 +553,16 @@
     /* QUOTE */
 
     .quote-section {
-      padding: 90px 20px;
-      background: #0b1120;
-    }
+  padding: 90px 20px;
+
+  background:
+    linear-gradient(rgba(2,6,23,0.85), rgba(2,6,23,0.85)),
+    url("images/request-a-quote-datacenter-rack.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
     .quote-section h2 {
       color: #38bdf8;
@@ -574,12 +588,17 @@
     }
 
     .quote-card {
-      background: #111827;
-      border: 1px solid #1f2937;
-      border-radius: 16px;
-      padding: 28px;
-      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
-    }
+  background: rgba(17,24,39,0.92);
+  border: 1px solid #1f2937;
+  border-radius: 16px;
+  padding: 28px;
+
+  backdrop-filter: blur(6px);
+
+  box-shadow:
+    0 20px 40px rgba(0,0,0,0.45),
+    0 0 25px rgba(56,189,248,0.08);
+}
 
     .quote-card h3 {
       margin-top: 0;
