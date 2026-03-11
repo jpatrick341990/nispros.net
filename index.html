@@ -254,7 +254,7 @@
       transform: translateY(0);
     }
 
-    /* QUOTE BUTTON */
+    /* BUTTONS */
 
     .quote-button {
       display: inline-block;
@@ -278,8 +278,6 @@
       color: white !important;
     }
 
-    /* CALL BUTTON */
-
     .call-btn {
       background: #38bdf8;
       color: black !important;
@@ -297,6 +295,23 @@
     .call-btn:hover {
       background: #0ea5e9;
       color: black !important;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 32px;
+      background: #38bdf8;
+      color: black;
+      font-weight: bold;
+      border-radius: 8px;
+      font-size: 18px;
+      transition: 0.3s;
+      box-shadow: 0 8px 20px rgba(56, 189, 248, 0.3);
+    }
+
+    .btn:hover {
+      background: #0ea5e9;
+      transform: scale(1.05);
     }
 
     /* HERO */
@@ -334,30 +349,14 @@
       margin-bottom: 30px;
     }
 
-    .btn {
-      display: inline-block;
-      padding: 14px 32px;
-      background: #38bdf8;
-      color: black;
-      font-weight: bold;
-      border-radius: 8px;
-      font-size: 18px;
-      transition: 0.3s;
-      box-shadow: 0 8px 20px rgba(56, 189, 248, 0.3);
-    }
-
-    .btn:hover {
-      background: #0ea5e9;
-      transform: scale(1.05);
-    }
-
     /* GENERAL SECTION */
 
     .section-title {
       color: #38bdf8;
       font-size: 36px;
-      margin-bottom: 10px;
+      margin-bottom: 14px;
       text-align: center;
+      letter-spacing: 0.5px;
     }
 
     .section-intro {
@@ -384,8 +383,6 @@
       justify-content: center;
       gap: 30px;
     }
-
-    /* SERVICE CARDS */
 
     .service-image,
     .security-image,
@@ -429,12 +426,7 @@
       left: -100%;
       width: 60%;
       height: 100%;
-      background: linear-gradient(
-        120deg,
-        transparent,
-        rgba(255,255,255,0.15),
-        transparent
-      );
+      background: linear-gradient(120deg, transparent, rgba(255,255,255,0.15), transparent);
       transform: skewX(-25deg);
       transition: 0.6s;
       z-index: 1;
@@ -477,11 +469,7 @@
     }
 
     .service-overlay {
-      background: linear-gradient(
-        rgba(0, 0, 0, 0),
-        rgba(0, 0, 0, 0.35),
-        rgba(0, 0, 0, 0.85)
-      );
+      background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.85));
       padding: 95px 22px 35px 22px;
       border-radius: 0 0 12px 12px;
       text-align: left;
@@ -516,89 +504,96 @@
       margin-bottom: 8px;
     }
 
-    /* WHY CHOOSE */
+    /* COLLAPSIBLE SECTIONS */
+
+    .why-choose,
+    .technology-section,
+    .projects-section {
+      padding: 90px 20px;
+    }
 
     .why-choose {
-      padding: 90px 20px;
       background: #111827;
     }
 
-    .why-grid {
-      max-width: 1100px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 24px;
+    .technology-section {
+      background: #0b1120;
     }
 
-    .why-card {
+    .projects-section {
       background: #0f172a;
-      border: 1px solid #1f2937;
-      border-radius: 14px;
-      padding: 24px;
-      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
     }
 
-    .why-card h3 {
-      margin-top: 0;
-      color: #f8fafc;
-      font-size: 22px;
-    }
-
-    .why-card p {
-      color: #cbd5e1;
-      margin-bottom: 0;
-    }
-
-    .why-toggle {
+    .toggle-wrap {
       max-width: 1100px;
       margin: auto;
     }
 
-    .why-toggle summary {
+    .toggle-wrap summary {
       cursor: pointer;
       list-style: none;
       text-align: center;
-      background: #0f172a;
+      background: rgba(15, 23, 42, 0.95);
       border: 1px solid #1f2937;
-      border-radius: 14px;
+      border-radius: 16px;
       padding: 22px 28px;
       box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
-      transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease, background 0.3s ease;
       user-select: none;
     }
 
-    .why-toggle summary:hover {
+    .toggle-wrap summary:hover {
       border-color: #38bdf8;
+      background: rgba(17, 24, 39, 0.98);
       box-shadow:
-        0 14px 28px rgba(0, 0, 0, 0.22),
-        0 0 20px rgba(56, 189, 248, 0.12);
-      transform: translateY(-2px);
+        0 16px 30px rgba(0, 0, 0, 0.22),
+        0 0 22px rgba(56, 189, 248, 0.12);
+      transform: translateY(-3px);
     }
 
-    .why-toggle summary::-webkit-details-marker {
+    .toggle-wrap summary::-webkit-details-marker {
       display: none;
     }
 
-    .why-toggle summary::after {
+    .toggle-wrap summary::after {
       content: "▼";
       display: inline-block;
       margin-left: 12px;
       font-size: 16px;
       color: #38bdf8;
-      transition: transform 0.3s ease;
+      transition: transform 0.35s ease;
     }
 
-    .why-toggle[open] summary::after {
+    .toggle-wrap[open] summary::after {
       transform: rotate(180deg);
     }
 
-    .why-toggle[open] .section-intro,
-    .why-toggle[open] .why-grid {
-      animation: fadeInWhy 0.35s ease;
+    .toggle-wrap .section-intro,
+    .toggle-wrap .toggle-content {
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease, opacity 0.35s ease, margin-top 0.35s ease;
     }
 
-    @keyframes fadeInWhy {
+    .toggle-wrap[open] .section-intro {
+      max-height: 200px;
+      opacity: 1;
+      margin-top: 28px;
+    }
+
+    .toggle-wrap[open] .toggle-content {
+      max-height: 2000px;
+      opacity: 1;
+      margin-top: 28px;
+    }
+
+    .toggle-wrap[open] .section-intro,
+    .toggle-wrap[open] .toggle-content {
+      animation: fadeInSection 0.35s ease;
+    }
+
+    @keyframes fadeInSection {
       from {
         opacity: 0;
         transform: translateY(-6px);
@@ -609,60 +604,27 @@
       }
     }
 
-    .why-toggle .section-intro {
-      margin-top: 28px;
+    .toggle-wrap[open] .why-card,
+    .toggle-wrap[open] .tech-card,
+    .toggle-wrap[open] .project-card {
+      animation: cardRise 0.4s ease;
     }
 
-    .why-toggle .why-grid {
-      margin-top: 28px;
+    @keyframes cardRise {
+      from {
+        opacity: 0;
+        transform: translateY(12px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
-    /* TECHNOLOGY SECTION */
+    /* GRID CARDS */
 
-    .technology-section {
-      padding: 90px 20px;
-      background: #0b1120;
-    }
-
-    .tech-grid {
-      max-width: 1100px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 24px;
-    }
-
-    .tech-card {
-      background: #111827;
-      border: 1px solid #1f2937;
-      border-radius: 14px;
-      padding: 24px;
-      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
-    }
-
-    .tech-card h3 {
-      margin-top: 0;
-      color: #f8fafc;
-      font-size: 22px;
-    }
-
-    .tech-card ul {
-      margin: 0;
-      padding-left: 18px;
-      color: #cbd5e1;
-    }
-
-    .tech-card li {
-      margin-bottom: 8px;
-    }
-
-    /* PROJECT EXAMPLES */
-
-    .projects-section {
-      padding: 90px 20px;
-      background: #0f172a;
-    }
-
+    .why-grid,
+    .tech-grid,
     .projects-grid {
       max-width: 1100px;
       margin: auto;
@@ -671,30 +633,64 @@
       gap: 24px;
     }
 
+    .why-card,
+    .tech-card,
     .project-card {
       background: #111827;
       border: 1px solid #1f2937;
       border-radius: 14px;
       padding: 24px;
       box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+      transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
     }
 
+    .why-card:hover,
+    .tech-card:hover,
+    .project-card:hover {
+      transform: translateY(-8px);
+      border-color: #38bdf8;
+      box-shadow:
+        0 18px 34px rgba(0, 0, 0, 0.28),
+        0 0 22px rgba(56, 189, 248, 0.14);
+    }
+
+    .why-card h3,
+    .tech-card h3,
     .project-card h3 {
       margin-top: 0;
       color: #f8fafc;
       font-size: 22px;
     }
 
+    .why-card p {
+      color: #cbd5e1;
+      margin-bottom: 0;
+    }
+
+    .tech-card ul,
     .project-card ul {
       margin: 0;
       padding-left: 18px;
       color: #cbd5e1;
     }
 
+    .tech-card li,
     .project-card li {
       margin-bottom: 8px;
     }
+    
+/* SECTION DIVIDER */
 
+.why-choose,
+.technology-section,
+.projects-section,
+.map-section,
+.contact,
+.seo-section,
+.quote-section {
+  border-top: 1px solid rgba(148, 163, 184, 0.08);
+}
+    
     /* SERVICE AREAS */
 
     .service-areas {
@@ -1038,7 +1034,7 @@
         height: 320px;
       }
 
-      .why-toggle summary {
+      .toggle-wrap summary {
         padding: 20px 18px;
       }
     }
@@ -1087,7 +1083,6 @@
 
   <section id="services" class="services">
     <h2 class="section-title">Our Services</h2>
-
     <p class="section-intro">
       NIS Pros delivers clean, dependable network infrastructure solutions for businesses across Houston and surrounding areas.
     </p>
@@ -1135,125 +1130,137 @@
   </section>
 
   <section class="why-choose">
-    <details class="why-toggle">
+    <details class="toggle-wrap">
       <summary class="section-title">Why Choose NIS Pros</summary>
 
       <p class="section-intro">
         We focus on dependable installs, organized workmanship, and practical solutions for businesses that need reliable connectivity.
       </p>
 
-      <div class="why-grid">
-        <div class="why-card">
-          <h3>Professional Installation</h3>
-          <p>Clean structured cabling, organized terminations, and dependable network infrastructure built for long-term performance.</p>
-        </div>
+      <div class="toggle-content">
+        <div class="why-grid">
+          <div class="why-card">
+            <h3>Professional Installation</h3>
+            <p>Clean structured cabling, organized terminations, and dependable network infrastructure built for long-term performance.</p>
+          </div>
 
-        <div class="why-card">
-          <h3>Commercial-Focused Solutions</h3>
-          <p>We design and install systems for offices, warehouses, retail spaces, and other business environments.</p>
-        </div>
+          <div class="why-card">
+            <h3>Commercial-Focused Solutions</h3>
+            <p>We design and install systems for offices, warehouses, retail spaces, and other business environments.</p>
+          </div>
 
-        <div class="why-card">
-          <h3>Scalable Infrastructure</h3>
-          <p>From a few drops to full business expansions, our work is planned to support growth and future upgrades.</p>
-        </div>
+          <div class="why-card">
+            <h3>Scalable Infrastructure</h3>
+            <p>From a few drops to full business expansions, our work is planned to support growth and future upgrades.</p>
+          </div>
 
-        <div class="why-card">
-          <h3>Houston-Based Service</h3>
-          <p>Local service with responsive communication for businesses in Houston and surrounding areas.</p>
+          <div class="why-card">
+            <h3>Houston-Based Service</h3>
+            <p>Local service with responsive communication for businesses in Houston and surrounding areas.</p>
+          </div>
         </div>
       </div>
     </details>
   </section>
 
   <section class="technology-section">
-    <h2 class="section-title">Technology Focus</h2>
-    <p class="section-intro">
-      We install practical infrastructure solutions that support business connectivity, security, and day-to-day operations.
-    </p>
+    <details class="toggle-wrap">
+      <summary class="section-title">Technology Focus</summary>
 
-    <div class="tech-grid">
-      <div class="tech-card">
-        <h3>Structured Cabling</h3>
-        <ul>
-          <li>Cat6 and Cat6A cabling</li>
-          <li>Patch panels and terminations</li>
-          <li>Rack organization and cable management</li>
-        </ul>
-      </div>
+      <p class="section-intro">
+        We install practical infrastructure solutions that support business connectivity, security, and day-to-day operations.
+      </p>
 
-      <div class="tech-card">
-        <h3>Commercial WiFi</h3>
-        <ul>
-          <li>Access point placement</li>
-          <li>Coverage planning</li>
-          <li>Business wireless networks</li>
-        </ul>
-      </div>
+      <div class="toggle-content">
+        <div class="tech-grid">
+          <div class="tech-card">
+            <h3>Structured Cabling</h3>
+            <ul>
+              <li>Cat6 and Cat6A cabling</li>
+              <li>Patch panels and terminations</li>
+              <li>Rack organization and cable management</li>
+            </ul>
+          </div>
 
-      <div class="tech-card">
-        <h3>Security Camera Infrastructure</h3>
-        <ul>
-          <li>PoE camera cabling</li>
-          <li>NVR connectivity</li>
-          <li>Organized low-voltage routing</li>
-        </ul>
-      </div>
+          <div class="tech-card">
+            <h3>Commercial WiFi</h3>
+            <ul>
+              <li>Access point placement</li>
+              <li>Coverage planning</li>
+              <li>Business wireless networks</li>
+            </ul>
+          </div>
 
-      <div class="tech-card">
-        <h3>Network Installation</h3>
-        <ul>
-          <li>Switches and routers</li>
-          <li>Low voltage infrastructure</li>
-          <li>Small business network deployment</li>
-        </ul>
+          <div class="tech-card">
+            <h3>Security Camera Infrastructure</h3>
+            <ul>
+              <li>PoE camera cabling</li>
+              <li>NVR connectivity</li>
+              <li>Organized low-voltage routing</li>
+            </ul>
+          </div>
+
+          <div class="tech-card">
+            <h3>Network Installation</h3>
+            <ul>
+              <li>Switches and routers</li>
+              <li>Low voltage infrastructure</li>
+              <li>Small business network deployment</li>
+            </ul>
+          </div>
+        </div>
       </div>
-    </div>
+    </details>
   </section>
 
   <section class="projects-section">
-    <h2 class="section-title">Project Examples</h2>
-    <p class="section-intro">
-      Here are examples of the types of business projects NIS Pros can quote and install.
-    </p>
+    <details class="toggle-wrap">
+      <summary class="section-title">Project Examples</summary>
 
-    <div class="projects-grid">
-      <div class="project-card">
-        <h3>Office Network Installation</h3>
-        <ul>
-          <li>Cat6 cabling to workstations</li>
-          <li>Wireless access point installation</li>
-          <li>Switch and rack organization</li>
-        </ul>
-      </div>
+      <p class="section-intro">
+        Here are examples of the types of business projects NIS Pros can quote and install.
+      </p>
 
-      <div class="project-card">
-        <h3>Warehouse Camera System</h3>
-        <ul>
-          <li>Interior and exterior camera drops</li>
-          <li>NVR and PoE switch setup</li>
-          <li>Organized cable routing</li>
-        </ul>
-      </div>
+      <div class="toggle-content">
+        <div class="projects-grid">
+          <div class="project-card">
+            <h3>Office Network Installation</h3>
+            <ul>
+              <li>Cat6 cabling to workstations</li>
+              <li>Wireless access point installation</li>
+              <li>Switch and rack organization</li>
+            </ul>
+          </div>
 
-      <div class="project-card">
-        <h3>Retail WiFi Upgrade</h3>
-        <ul>
-          <li>Improved customer and staff coverage</li>
-          <li>Access point replacement</li>
-          <li>Cleaner business network layout</li>
-        </ul>
-      </div>
+          <div class="project-card">
+            <h3>Warehouse Camera System</h3>
+            <ul>
+              <li>Interior and exterior camera drops</li>
+              <li>NVR and PoE switch setup</li>
+              <li>Organized cable routing</li>
+            </ul>
+          </div>
 
-      <div class="project-card">
-        <h3>Business Expansion Cabling</h3>
-        <ul>
-          <li>New workstations and data drops</li>
-          <li>Patch panel additions</li>
-          <li>Scalable infrastructure upgrades</li>
-        </ul>
+          <div class="project-card">
+            <h3>Retail WiFi Upgrade</h3>
+            <ul>
+              <li>Improved customer and staff coverage</li>
+              <li>Access point replacement</li>
+              <li>Cleaner business network layout</li>
+            </ul>
+          </div>
+
+          <div class="project-card">
+            <h3>Business Expansion Cabling</h3>
+            <ul>
+              <li>New workstations and data drops</li>
+              <li>Patch panel additions</li>
+              <li>Scalable infrastructure upgrades</li>
+            </ul>
+          </div>
+        </div>
       </div>
-    </div>
+    </details>
   </section>
 
   <section id="areas" class="service-areas">
